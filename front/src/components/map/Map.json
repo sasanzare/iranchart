@@ -1,0 +1,13 @@
+{
+    "RECORDS":
+    [
+        {
+            "name":"نمازی، خوارزمی",
+            "slug":"Namazi, kharazmi",
+            "id":1,
+            "geometry":{
+                "cordinates":[29.6303,52.5200]
+            }
+        }
+    ]
+}
