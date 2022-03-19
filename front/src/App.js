@@ -1,5 +1,4 @@
 import { Routes, Route } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Backtotop from "./components/backtotop/Backtotop";
 import Header from './blocks/header/Header';
 import Footer from './blocks/footer/Footer';
