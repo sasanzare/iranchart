@@ -14,8 +14,8 @@ function App() {
       <Backtotop/>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact-us" element={<Contact />} />
         <Route path="/articles" element={<Articles />} />
         <Route path="*"  element={<NotFound/>} />
       </Routes>

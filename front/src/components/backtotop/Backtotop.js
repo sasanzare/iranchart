@@ -25,7 +25,7 @@ const Backtotop = () =>{
   
   return (
     <div onClick={goTop} 
-      style={{display: visible ? 'flex' : 'none'}} className="Backtotop bg-es align-items-center justify-content-center">
+      style={{display: visible ? 'flex' : 'none'}} className="Backtotop bg-green align-items-center justify-content-center">
       <FontAwesomeIcon className='text-white' icon={faArrowUp}/>
     </div>
   );

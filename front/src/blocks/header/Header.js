@@ -1,4 +1,4 @@
-// import {Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 function Header() {
   return (
     <div className="Header">
@@ -20,9 +20,9 @@ function Header() {
             <ul className="navbar-nav mr-auto text-right justify-content-lg-center pr-lg-5 pr-2  d-lg-flex d-none ">
 
               <li  className="nav-item position-absolute li-logo">
-                <a className="nav-link p-0 pt-3" href="https://iranchart.net/">
+                <Link className="nav-link p-0 pt-3" to="/">
                   <img src="./image/logo.png"/>
-                </a>
+                </Link>
               </li>
                            
               <li className="dropdown">
@@ -43,17 +43,19 @@ function Header() {
                  
                    </li>
                    <li className=" dropdown ">
-                    <a className="dropbtn bg-white border-0 d-block" href="https://iranchart.net/about-us" >درباره ما</a>
-                   
-                     </li>
-                     <li className=" dropdown ">
-                      <a className="dropbtn bg-white border-0 d-block" href="https://iranchart.net/contact-us" >ارتباط با ما</a>
-                     
-                       </li>
-                       <li className=" dropdown ">
                         <a className="dropbtn bg-white border-0 d-block" href="https://iranchart.net/mag" >مجله ایران چارت</a>
                        
                          </li>
+               
+                     <li className=" dropdown ">
+                      <Link className="dropbtn bg-white border-0 d-block" to="/contact-us" >ارتباط با ما</Link>
+                     
+                       </li>
+                       <li className=" dropdown ">
+                    <Link className="dropbtn bg-white border-0 d-block" to="/about-us" >درباره ما</Link>
+                   
+                     </li>
+                    
             </ul>
             <ul className="navbar-nav mr-auto text-right justify-content-lg-center pr-2 pt-3  d-lg-none">
               <li className="nav-item">
