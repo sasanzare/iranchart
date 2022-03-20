@@ -6,10 +6,11 @@ import Home from './pages/home/Home'
 import About from './pages/about/About'
 import Contact from './pages/contact/Contact'
 import Articles from "./pages/articles/Articles";
+import Faq from "./pages/faq/Faq";
 import NotFound from "./pages/404/NotFound";
 function App() {
   return (
-    <div className="App overflow-hidden">
+    <div id="App" className="App overflow-hidden">
       <Header/>
       <Backtotop/>
       <Routes>
@@ -17,6 +18,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/articles" element={<Articles />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="*"  element={<NotFound/>} />
       </Routes>
       <Footer/>

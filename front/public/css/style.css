@@ -242,7 +242,7 @@ a:hover {
   border-radius: 10px;
 }
 .radius-15 {
-  border-radius: 15px;
+  border-radius: 15px!important;
 }
 .radius-25 {
   border-radius: 25px;
@@ -426,6 +426,7 @@ a[class~="col-md-4"]:hover {
 }
 .sidebar {
   width: 253px;
+  top: 85px;
 }
 .sidebar-relative {
   position: absolute !important;
@@ -637,9 +638,10 @@ p[class~="pt-3"] ~ div > .a-social:hover > i,
 
 input:focus,
 textarea:focus,
-button:focus {
+button:focus  {
   border: 1px #29bc1e solid !important;
   box-shadow: 0 1px 15px rgba(0, 0, 0, 0.15) !important;
+  outline:none!important;
 }
 .card-article p {
   padding: 0 0.5rem;
