@@ -1,4 +1,3 @@
-import './Faq.css'
 function Faq() {
   return (
     <div className="Faq">
@@ -184,7 +183,7 @@ function Faq() {
 
             
           </div>
-          <div className="col-lg-3 text-center  px-0 mr-n4">
+          <div className="col-lg-3 text-center  pl-0 mr-n5 pr-3">
             <div
               className="shadow-sm radius-10 p-2 pr-3 pl-3 sidebar  pb-2 position-sticky "
             >

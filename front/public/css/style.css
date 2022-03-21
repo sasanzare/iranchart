@@ -426,7 +426,7 @@ a[class~="col-md-4"]:hover {
 }
 .sidebar {
   width: 253px;
-  top: 85px;
+  top: 75px;
 }
 .sidebar-relative {
   position: absolute !important;
