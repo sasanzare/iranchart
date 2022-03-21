@@ -3,7 +3,7 @@ function Footer() {
   return (
         <div className='Footer'>
 
-                <div className="container-fluid pt-5">
+                <div className="container-fluid">
                   <div className="row footerbg pt-4">
                     <div className="col-md-6 col-sm-6 pb-4 text-center">
                       <h5 className="text-white text-md-right  ">درباره ایران چارت</h5>

@@ -1,3 +1,4 @@
+
 function Faq() {
   return (
     <div className="Faq">

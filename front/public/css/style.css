@@ -835,3 +835,15 @@ button:focus  {
   border-radius: 20px;
   box-shadow: 0 1px 30px #e4e4e4;
 }
+
+.btn-green{
+  background-color: #29bc1e;
+  color: #fff;
+
+}
+.btn-green:hover{
+  background-color: #fff;
+  color: #29bc1e;
+  border: 1px solid #29bc1e;
+
+}
