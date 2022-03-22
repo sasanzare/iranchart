@@ -10,6 +10,7 @@ import Article from "./pages/article/Article";
 import Faq from "./pages/faq/Faq";
 import NotFound from "./pages/404/NotFound";
 import Courses from "./pages/courses/Courses";
+import Course from "./pages/course/Course";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/article" element={<Article />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/courses" element={<Courses />} />
+        <Route path="/course" element={<Course />} />
         <Route path="*"  element={<NotFound/>} />
       </Routes>
       <Footer/>
