@@ -27,6 +27,8 @@ sitemaps = {
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls', namespace='blog')),
-    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},
-         name='django.contrib.sitemaps.views.sitemap')
+    path('api-auth/', include('rest_framework.urls')),
+    path('api/', include('api.urls', namespace='api')),
+    path('sitemap.xml', sitemap, {'sitemaps': sitemaps},name='django.contrib.sitemaps.views.sitemap'),
+   
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -41,10 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blog.apps.BlogConfig',
+    'api.apps.ApiConfig',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
-    'api',
     'rest_framework'
 ]
 
