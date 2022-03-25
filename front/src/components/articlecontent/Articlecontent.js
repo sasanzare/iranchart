@@ -25,16 +25,16 @@ function Articlecontent(props) {
           </Link>
           <span>&gt;</span>
 
-          <a href={"/article/"+props.id} className="mr-3">
+          <Link to={"/article/"+props.id} className="mr-3">
             عنوان این مقاله
-          </a>
+          </Link>
         </div>
 
         <div className="text-center p-3 shadow-sm radius-10 mt-3 wrapper-articel">
           <h1 className="h4 text-center pb-3">{title}</h1>
           <img
             src={image}
-            alt="تصویر مقاله ایران چارت"
+            alt={title}
             className="w-100 rounded"
           />
           <p className="text-justify pb-3 pt-3">
