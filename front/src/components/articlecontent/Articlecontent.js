@@ -10,7 +10,7 @@ function Articlecontent(props) {
     useEffect( ()=>{
         axios.get('http://localhost:8000/api/v1/'+props.id)
         .then(resp =>setarticle(resp.data))
-    },[]);
+    },[props.id]);
 
     if(article){  
         title = article.title;    

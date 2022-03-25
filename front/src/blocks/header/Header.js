@@ -23,7 +23,7 @@ function Header() {
 
               <li  className="nav-item position-absolute li-logo">
                 <Link className="nav-link p-0 pt-3" to="/">
-                  <img src="./image/logo.png"/>
+                  <img src="/image/logo.png" width={120}/>
                 </Link>
               </li>
                            
