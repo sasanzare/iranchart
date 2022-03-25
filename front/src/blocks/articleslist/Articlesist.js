@@ -12,7 +12,7 @@ function Articleslist() {
     },[]);
 
     if(articles) {
-        content = articles.map((article) => <Articlecard key={article.id} thumbnail={article.thumbnail} title={article.title} content={article.body}/>);       
+        content = articles.map((article) => <Articlecard url={article.id} key={article.id} thumbnail={article.thumbnail} title={article.title} content={article.body}/>);       
     }
     return(
         <div className="Articleslist row pb-5"> 

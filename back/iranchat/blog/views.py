@@ -3,7 +3,7 @@ from django.shortcuts import render, get_object_or_404
 from django.core.paginator import Paginator, EmptyPage,\
                                   PageNotAnInteger
 from django.core.mail import send_mail
-from django.views.generic import ListView
+from django.views.generic import ListView,DetailView
 from django.contrib.postgres.search import SearchVector, SearchQuery, SearchRank
 from django.contrib.postgres.search import TrigramSimilarity
 from .models import Post, Comment
@@ -82,6 +82,14 @@ class PostListView(ListView):
     context_object_name = 'posts'
     paginate_by = 3
     template_name = 'blog/post/list.html'
+
+
+class PostDetail(DetailView):
+    def get_object(self):
+        return get_object_or_404(Post.objects.filter(status="published"),
+        pk=self.kwargs.get("pk")
+        )
+
 
 
 def post_share(request, post_id):
