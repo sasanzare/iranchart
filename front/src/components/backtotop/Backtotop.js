@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faArrowUp} from '@fortawesome/free-solid-svg-icons'
-import './Backtotop.css'
+import Styles  from  './Backtotop.css'
 const Backtotop = () =>{
   
   const [visible, setVisible] = useState(false)
