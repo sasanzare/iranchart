@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'api.apps.ApiConfig',
     'faq.apps.FaqConfig',
+    'contact.apps.ContactConfig',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',

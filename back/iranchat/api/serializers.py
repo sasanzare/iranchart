@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from blog.models import Post
 from faq.models import FaqQuestion
+from contact.models import Contact
 from django.contrib.auth.models import User
 
 class PostSerializer(serializers.ModelSerializer):
@@ -12,6 +13,11 @@ class PostSerializer(serializers.ModelSerializer):
 class FaqQuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model= FaqQuestion
+        fields = "__all__"
+        
+class ContactSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= Contact
         fields = "__all__"
 
 class UserSerializer(serializers.ModelSerializer):
