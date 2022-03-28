@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'api.apps.ApiConfig',
     'faq.apps.FaqConfig',
     'contact.apps.ContactConfig',
+    'quiz.apps.QuizConfig',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
