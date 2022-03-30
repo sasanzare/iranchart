@@ -11,6 +11,8 @@ import Faq from "./pages/faq/Faq";
 import NotFound from "./pages/404/NotFound";
 import Courses from "./pages/courses/Courses";
 import Course from "./pages/course/Course";
+import Cart from "./pages/cart/Cart";
+import Order from "./pages/order/Order";
 
 function App() {
   return (
@@ -26,6 +28,8 @@ function App() {
         <Route path="/faq" element={<Faq />} />
         <Route path="/courses" element={<Courses />} />
         <Route path="/course" element={<Course />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/order" element={<Order />} />
         <Route path="*"  element={<NotFound/>} />
       </Routes>
       <Footer/>

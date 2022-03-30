@@ -28,6 +28,7 @@ class Question(models.Model):
         verbose_name='آزمون'
 	)
 	prompt = models.CharField(max_length=255, default='',verbose_name='سوال')
+	# post = models.ManyToManyField(Post,verbose_name='نوشته',blank=True)
 
 	class Meta:
 		ordering = ['id']

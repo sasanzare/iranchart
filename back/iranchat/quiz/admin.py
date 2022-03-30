@@ -59,3 +59,4 @@ class AnswerQuestionFilter(admin.SimpleListFilter):
 class AnswerAdmin(admin.ModelAdmin):
 	list_display=['text', 'correct', 'question']
 	list_filter=[AnswerQuestionFilter, ]
+

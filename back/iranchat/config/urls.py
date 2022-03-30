@@ -20,6 +20,10 @@ from blog.sitemaps import PostSitemap
 from django.conf import settings
 from django.conf.urls.static import static
 
+admin.site.site_header = "پنل ایران چارت"
+admin.site.site_title = "ایران چارت"
+admin.site.index_title = "به پورتال ایران چارت خوش آمدید!"
+
 sitemaps = {
     'posts': PostSitemap,
 }
