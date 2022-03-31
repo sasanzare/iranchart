@@ -4,10 +4,11 @@ import Lable from "../../microComponents/lable/Lable";
 import Textarea from "../../components/textarea/Textarea";
 function Order() {
   const [name, setName] = useState("");
+  const [lName, setlName] = useState("");
   const [province, setProvince] = useState("");
   const [city, setCity] = useState("");
   const [address, setAddress] = useState("");
-  const [phoone, setPhoone] = useState("");
+  const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
   const [digit, setDigit] = useState("");
   return (
@@ -16,11 +17,17 @@ function Order() {
       <form>
         <div className="col-lg-6 col-md-7 col-sm-9 col-11 shadow mx-auto p-3 rounded">
           
-            <Lable title="نام و نام‌خانوادگی" />
+            <Lable title="نام" />
             <Inputfield
               type="text"
               myclass=""
               value={(e) => setName(e.target.value)}
+            />
+            <Lable title="نام‌خانوادگی" />
+            <Inputfield
+              type="text"
+              myclass=""
+              value={(e) => setlName(e.target.value)}
             />
             <Lable title="استان" />
             <Inputfield
@@ -44,7 +51,7 @@ function Order() {
             <Inputfield
               type="number"
               myclass=""
-              value={(e) => setPhoone(e.target.value)}
+              value={(e) => setPhone(e.target.value)}
             />
             <Lable title="ایمیل" />
             <Inputfield

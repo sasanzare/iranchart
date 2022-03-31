@@ -9,6 +9,20 @@ class PublishedManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(status='published')
 
+class Category(models.Model):
+    name = models.CharField(max_length=150, db_index=True,verbose_name='نام')
+    slug = models.SlugField(max_length=150, unique=True ,db_index=True,verbose_name='آدرس')
+    created_at = models.DateTimeField(auto_now_add=True,verbose_name='زمان ایجاد')
+    updated_at = models.DateTimeField(auto_now=True,verbose_name='زمان آپدیت')
+
+    class Meta:
+        ordering = ('name', )
+        verbose_name = 'دسته بندی'
+        verbose_name_plural = 'دسته بندی‌ها'
+
+    def __str__(self):
+        return self.name
+
 
 class Post(models.Model):
     STATUS_CHOICES = (
@@ -18,6 +32,7 @@ class Post(models.Model):
     title = models.CharField(max_length=250,verbose_name="عنوان")
     slug = models.SlugField(max_length=250,unique_for_date='publish',verbose_name='آدرس نوشته')
     author = models.ForeignKey(User,on_delete=models.CASCADE,related_name='blog_posts',verbose_name='نویسنده')
+    category = models.ForeignKey(Category,on_delete=models.DO_NOTHING,related_name='blog_category',verbose_name='دسته بندی')
     body = models.TextField(verbose_name="محتوا")
     thumbnail = models.ImageField(upload_to='images',verbose_name='تصویر نوشته')
     publish = models.DateTimeField(default=timezone.now,verbose_name='زمان انتشار')

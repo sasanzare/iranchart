@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'contact.apps.ContactConfig',
     'quiz.apps.QuizConfig',
     'shop.apps.ShopConfig',
+    'orders.apps.OrdersConfig',
 
     'taggit',
     'django.contrib.sites',

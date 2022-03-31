@@ -19,8 +19,11 @@ class Category(models.Model):
 
 class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE,verbose_name='دسته بندی')
-    name = models.CharField(max_length=100, db_index=True,verbose_name='نام محصول')
-    slug = models.SlugField(max_length=100, db_index=True,verbose_name='آدرس محصول')
+    name = models.CharField(max_length=100, db_index=True,verbose_name='نام دوره')
+    slug = models.SlugField(max_length=100, db_index=True,verbose_name='آدرس دوره')
+    level = models.CharField(max_length=100, db_index=True,verbose_name='سطح دوره')
+    location = models.CharField(max_length=100, db_index=True,verbose_name='محل برگزاری')
+    about = models.TextField(blank=True,verbose_name='درباره مدرس دوره')
     description = models.TextField(blank=True,verbose_name='توضیحات')
     price = models.DecimalField(max_digits=10, decimal_places=0,verbose_name='قیمت')
     available = models.BooleanField(default=True,verbose_name='در دسترس')
@@ -31,8 +34,8 @@ class Product(models.Model):
 
     class Meta:
         ordering = ('name', )
-        verbose_name = 'محصول'
-        verbose_name_plural = 'محصول‌ها'
+        verbose_name = 'دوره'
+        verbose_name_plural = 'دوره‌ها'
         index_together = (('id', 'slug'),)
 
     def __str__(self):

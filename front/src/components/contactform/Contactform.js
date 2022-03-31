@@ -92,7 +92,7 @@ function Contactform() {
                 name="subject"
                 value={subject}
                 onInput={(e) => setSubject(e.target.value)}
-                laceholder="عنوان پیام"
+                placeholder="عنوان پیام"
                 required
               />
             </div>

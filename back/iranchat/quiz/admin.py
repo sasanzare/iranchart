@@ -6,7 +6,7 @@ from . import models
 @admin.register(models.Quiz)
 class QuizAdmin(admin.ModelAdmin):
 	search_fields = ['author', 'title']
-	list_display=['id', 'title', 'author', 'created_at']
+	list_display=['id', 'title','category','author', 'created_at']
 	list_filter = ['author']
 
 class AnswerInline(admin.TabularInline):
@@ -33,8 +33,9 @@ class QuestionAdmin(admin.ModelAdmin):
 	fields = [
 		'prompt',
 		'quiz',
+		'psot'
 	]
-	list_display=['id', 'prompt', 'quiz']
+	list_display=['id', 'prompt', 'quiz','psot']
 	list_filter=[QuizQuestionFilter, ]
 	search_fields=['quiz', 'title']
 	inlines = [AnswerInline, ]
@@ -60,3 +61,8 @@ class AnswerAdmin(admin.ModelAdmin):
 	list_display=['text', 'correct', 'question']
 	list_filter=[AnswerQuestionFilter, ]
 
+
+@admin.register(models.Category)
+class CategoryAdmin(admin.ModelAdmin):
+    list_display = ['name', 'slug']
+    prepopulated_fields = {'slug': ('name',)}
