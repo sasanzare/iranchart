@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'quiz.apps.QuizConfig',
     'shop.apps.ShopConfig',
     'orders.apps.OrdersConfig',
+    'newsletter.apps.NewsletterConfig',
 
     'taggit',
     'django.contrib.sites',
