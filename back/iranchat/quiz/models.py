@@ -57,6 +57,7 @@ class Question(models.Model):
 	def __str__(self):
 		return self.prompt
 
+
 class Answer(models.Model):
 	question = models.ForeignKey(
 		Question, 

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'newsletter.apps.NewsletterConfig',
 
+    'ckeditor',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',

@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
 from django.utils.html import format_html
+from ckeditor.fields import RichTextField
 
 class PublishedManager(models.Manager):
     def get_queryset(self):
@@ -33,7 +34,7 @@ class Post(models.Model):
     slug = models.SlugField(max_length=250,unique_for_date='publish',verbose_name='آدرس نوشته')
     author = models.ForeignKey(User,on_delete=models.CASCADE,related_name='blog_posts',verbose_name='نویسنده')
     category = models.ForeignKey(Category,on_delete=models.DO_NOTHING,related_name='blog_category',verbose_name='دسته بندی')
-    body = models.TextField(verbose_name="محتوا")
+    body = RichTextField(verbose_name="محتوا")
     thumbnail = models.ImageField(upload_to='images',verbose_name='تصویر نوشته')
     publish = models.DateTimeField(default=timezone.now,verbose_name='زمان انتشار')
     created = models.DateTimeField(auto_now_add=True)
