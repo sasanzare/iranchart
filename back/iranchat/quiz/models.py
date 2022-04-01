@@ -5,8 +5,8 @@ from blog.models import Post
 class Category(models.Model):
     name = models.CharField(max_length=150, db_index=True,verbose_name='نام')
     slug = models.SlugField(max_length=150, unique=True ,db_index=True,verbose_name='آدرس')
-    created_at = models.DateTimeField(auto_now_add=True,verbose_name='زمان ایجاد')
-    updated_at = models.DateTimeField(auto_now=True,verbose_name='زمان آپدیت')
+    created = models.DateTimeField(auto_now_add=True,verbose_name='زمان ایجاد')
+    updated = models.DateTimeField(auto_now=True,verbose_name='زمان آپدیت')
 
     class Meta:
         ordering = ('name', )
@@ -21,7 +21,7 @@ class Quiz(models.Model):
 	title = models.CharField(max_length=255, default='',verbose_name='عنوان')
 	author = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=None,verbose_name='نویسنده')
 	category = models.ForeignKey(Category, related_name='quiz', on_delete=models.CASCADE,verbose_name='دسته بندی')
-	created_at = models.DateTimeField(auto_now_add=True,verbose_name='زمان ایجاد')
+	created = models.DateTimeField(auto_now_add=True,verbose_name='زمان ایجاد')
 	times_taken = models.IntegerField(default=0, editable=False,verbose_name='زمان گرفته شده')
 
 	@property
@@ -39,7 +39,7 @@ class Quiz(models.Model):
 class Question(models.Model):
 	quiz = models.ForeignKey(
 		Quiz, 
-		related_name='questions', # need related name for hyper link related field to work ?!?
+		related_name='questions', 
 		on_delete=models.DO_NOTHING,
         verbose_name='آزمون'
 	)
@@ -50,7 +50,6 @@ class Question(models.Model):
         verbose_name='نوشته'
 	)
 	prompt = models.CharField(max_length=255, default='',verbose_name='سوال')
-	# post = models.ManyToManyField(Post,verbose_name='نوشته',blank=True)
 
 	class Meta:
 		ordering = ['id']
