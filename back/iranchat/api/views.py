@@ -3,7 +3,8 @@ from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIVi
 from blog.models import Post
 from faq.models import FaqQuestion
 from contact.models import Contact
-from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer
+from newsletter.models import Email
+from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -22,6 +23,12 @@ class FaqList(ListAPIView):
 class ContactList(ListCreateAPIView):
     queryset = Contact.objects.all()
     serializer_class = ContactSerializer
+
+
+class EmailList(ListCreateAPIView):
+    queryset = Email.objects.all()
+    serializer_class = EmailSerializer
+
 
 class UserList(ListCreateAPIView):
     queryset = User.objects.all()

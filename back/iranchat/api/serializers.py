@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from blog.models import Post
 from faq.models import FaqQuestion
+from newsletter.models import Email
 from contact.models import Contact
 from django.contrib.auth.models import User
 
@@ -24,3 +25,8 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model= User
         fields = "__all__"
+
+class EmailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= Email
+        fields = ['email']

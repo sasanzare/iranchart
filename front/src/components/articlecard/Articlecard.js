@@ -9,8 +9,7 @@ function Articlecard(props) {
           <h6 className="text-center f-aviny font-17 mt-4">{props.title}</h6>
           <hr className="cs-br-color" width="80%" />
           <div className=" pt-1 pb-1 pr-lg-3 pl-lg-3 pr-md-3 pl-md-2  pl-4 pr-4 d-flex justify-content-between">
-            <p>
-            {props.content}
+            <p dangerouslySetInnerHTML={{ __html: props.content.split("\r\n\r\n")[0].replace(/<\/?[^>]+(>|$)/g, "")}}>
             </p>
           </div>
         </Link>
