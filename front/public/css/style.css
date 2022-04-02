@@ -848,3 +848,7 @@ button:focus  {
   border: 1px solid #29bc1e;
 
 }
+
+img{
+  border-radius: 0.25rem;
+}

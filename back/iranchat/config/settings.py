@@ -25,15 +25,18 @@ SECRET_KEY = 'django-insecure-uwid^c3wx4-w06d)%#r*7v05&00ofcj0aj+e@^(op3!ii#eeoq
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 SITE_ID = 1
 
 # Application definition
 
 INSTALLED_APPS = [
+    # admin panel
+    'admin_volt.apps.AdminVoltConfig',
+    # admin panel
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -48,8 +51,8 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'orders.apps.OrdersConfig',
     'newsletter.apps.NewsletterConfig',
-
     'ckeditor',
+    'ckeditor_uploader',
     'taggit',
     'django.contrib.sites',
     'django.contrib.sitemaps',
@@ -74,8 +77,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     #for api
     'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
+    'django.middleware.common.CommonMiddleware', 
 ]
+
 #cros allowed
 CORS_ALLOWED_ORIGIN_REGEXES = [
     'http://localhost:3000',
@@ -95,6 +99,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                # for admin panel 
+                'django.template.context_processors.request',
+                # for admin panel 
             ],
         },
     },
@@ -148,11 +155,22 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_RUL ='/media'
-MEDIA_ROOT= BASE_DIR / 'media'
+
+MEDIA_URL = '/media/'
+
+  
+
+if DEBUG:
+  STATICFILES_DIRS = [ BASE_DIR /  'static']
+else:
+  STATIC_ROOT = BASE_DIR / 'static'
+
+
+MEDIA_ROOT = BASE_DIR /  'static/media'
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
@@ -160,9 +178,8 @@ MEDIA_ROOT= BASE_DIR / 'media'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-
-
-
+# editor
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 
 

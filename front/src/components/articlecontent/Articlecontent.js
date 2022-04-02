@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useState,useEffect } from "react";
 import axios from "axios";
 function Articlecontent(props) {
+    const BaseURLBack = 'http://localhost:8000'
     let title = null;
     let image = null;
     let content = null;
@@ -16,6 +17,8 @@ function Articlecontent(props) {
         title = article.title;    
         image = article.thumbnail;   
       content = article.body;
+      let src = content.split(' src=\"')[1].split(/[ \"]/)[0];
+      content = content.replace(src, BaseURLBack + src);
     }
   return (
       <div className="Articlecontent col-lg-9 col-12 pl-lg-5 pr-lg-1">
@@ -35,11 +38,11 @@ function Articlecontent(props) {
           <img
             src={image}
             alt={title}
-            className="w-100 rounded"
+            className="w-100"
           />
-          <p className="text-justify pb-3 pt-3">
-          {content}
-          </p>
+          <div className="text-justify pb-3 pt-3" dangerouslySetInnerHTML={{ __html: content }}>
+          
+          </div>
 
           <div className=" col-12 r15 text-center ">
             <p className="cs-color text-center mt-1">
