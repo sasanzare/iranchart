@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState,useEffect } from "react";
 import axios from "axios";
+import Newsletter from "../newsletter/Newsletter";
 function Articlecontent(props) {
     const BaseURLBack = 'http://localhost:8000/'
     let title = null;
@@ -42,27 +43,7 @@ function Articlecontent(props) {
           
           </div>
 
-          <div className=" col-12 r15 text-center ">
-            <p className="cs-color text-center mt-1">
-              برای دریافت رایگان ویدیوی آموزشی آشنایی با دنیای ارز های دیجیتال
-              ایمیل خود را وارد کنین وبلافاصــــله لینک های دانلود را دریافت
-              نمایید
-            </p>
-            <form className=" justify-content-center" action="/action_page.php">
-              <input
-                type="email"
-                className="form-control"
-                id="email"
-                placeholder="آدرس ایمیل خود را وارد کنید"
-              />
-              <button
-                type="submit"
-                className="btn btn-success mt-2 mb-2 col-lg-4 col-md-5 col-sm-6"
-              >
-                ارسال
-              </button>
-            </form>
-          </div>
+          <Newsletter />
         </div>
       </div>
   );

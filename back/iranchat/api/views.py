@@ -4,7 +4,8 @@ from blog.models import Post
 from faq.models import FaqQuestion
 from contact.models import Contact
 from newsletter.models import Email
-from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer
+from shop.models import Product
+from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer,ProductSerializer
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -33,3 +34,8 @@ class EmailList(ListCreateAPIView):
 class UserList(ListCreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+# shop 
+class ProductList(ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer

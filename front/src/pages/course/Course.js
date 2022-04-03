@@ -1,4 +1,23 @@
+import {Link} from "react-router-dom"
+import { useState,useEffect } from "react";
+import axios from 'axios'
 function Course() {
+  const BaseURLBack = 'http://localhost:8000/'
+  let title = null;
+  let image = null;
+  let content = null;
+  const [article, setarticle] = useState(null);
+
+  useEffect( ()=>{
+      axios.get('http://localhost:8000/api/v1/')
+      .then(resp =>setarticle(resp.data))
+  });
+
+  if(article){  
+      // title = article.title;    
+      // image = article.thumbnail;   
+      // content = article.body.replace('src=\"/', 'src="' + BaseURLBack);
+  }
   return (
     <div className="Course">
       <div className="container pt-5">
@@ -46,43 +65,16 @@ function Course() {
           </div>
           <div className="col-lg-3 text-center  pl-0 mr-n5 pr-3">
             <div className="shadow-sm radius-10 p-2 pr-3 pl-3 sidebar  pb-2 position-sticky">
-              <img src="./image/logo.png" width="80%" className="pb-3 pt-2" />
-
-              <p className="pb-2">
-                تیم تخصـــصی ایرانچارت با هدف آمـــــوزش در زمیــنه ی
-                فارکــــــس در تلاش اســـت تا بهـترین متد های بـازار جهانی فارکس
-                مخاطبان خـود را آشنا ساخته و آمــوزش های کاملی را ارئه کنــــد
-              </p>
-              <a
-                className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="https://iranchart.net/courses"
+              <p>دوره اموزسی اصغر</p>
+              <hr/>
+            <span>سطح دوره</span>
+             
+              <Link
+                className="btn btn-block radius-10 text-white btn-green"
+                to="/order"
               >
-                دوره های آموزشی
-              </a>
-              <a
-                className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="https://iranchart.net/daily-trade"
-              >
-                تحلیل روزانه
-              </a>
-              <a
-                className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="https://iranchart.net/Economic-calendar"
-              >
-                تقویم اقتصادی
-              </a>
-              <a
-                className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="https://iranchart.net"
-              >
-                ثبت نام بروکر
-              </a>
-              <a
-                className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="htps://iranchart.net/quiz"
-              >
-                کوییز
-              </a>
+                ثبت نام دوره
+              </Link>
             </div>
           </div>
         </div>

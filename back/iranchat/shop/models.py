@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.html import format_html
 from ckeditor_uploader.fields import RichTextUploadingField
 
 class Category(models.Model):
@@ -38,6 +39,11 @@ class Product(models.Model):
         verbose_name = 'دوره'
         verbose_name_plural = 'دوره‌ها'
         index_together = (('id', 'slug'),)
+
+    def image_tag(self):
+        return format_html("<img width='100px' height='70px' style='border-radius: 5px;' src='{}'/>".format(self.image.url))
+    image_tag.short_description ="تصویر"  
+
 
     def __str__(self):
         return self.name

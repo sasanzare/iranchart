@@ -1,4 +1,5 @@
 import { useState,useEffect } from "react";
+import EmailPatter from "../../microComponents/emailpatter/Emailpatter";
 function Contactform() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -6,7 +7,6 @@ function Contactform() {
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [correctsubmit, setCorrectsubmit] = useState(false);
-  let emailPatter = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
   useEffect(() => {
     setTimeout(()=>setCorrectsubmit(false), 4000);
@@ -14,7 +14,7 @@ function Contactform() {
 
   function sendContact(e) {
     e.preventDefault();
-    if (emailPatter.test(email)) {
+    if (EmailPatter.test(email)) {
     const requestOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },

@@ -1,4 +1,4 @@
-function Inputfield(props) {
+function Textarea(props) {
   return (
     <div className="form-group">
       <textarea
@@ -11,4 +11,4 @@ function Inputfield(props) {
   );
 }
 
-export default Inputfield;
+export default Textarea;

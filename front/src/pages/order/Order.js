@@ -10,6 +10,7 @@ function Order() {
   const [address, setAddress] = useState("");
   const [phone, setPhone] = useState("");
   const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
   const [digit, setDigit] = useState("");
   return (
     <div className="Order container pt-5">
@@ -21,81 +22,90 @@ function Order() {
             <Inputfield
               type="text"
               myclass=""
-              value={(e) => setName(e.target.value)}
+              value={name}
+              insert={(e) => setName(e.target.value)}
             />
             <Lable title="نام‌خانوادگی" />
             <Inputfield
               type="text"
               myclass=""
-              value={(e) => setlName(e.target.value)}
+              value={lName}
+              insert={(e) => setlName(e.target.value)}
             />
             <Lable title="استان" />
             <Inputfield
               type="text"
               myclass=""
-              value={(e) => setProvince(e.target.value)}
+              value={province}
+              insert={(e) => setProvince(e.target.value)}
             />
             <Lable title="شهر" />
             <Inputfield
               type="text"
               myclass=""
-              value={(e) => setCity(e.target.value)}
+              value={city}
+              insert={(e) => setCity(e.target.value)}
             />
             <Lable title="آدرس کامل" />
             <Inputfield
               type="text"
               myclass=""
-              value={(e) => setAddress(e.target.value)}
+              value={address}
+              insert={(e) => setAddress(e.target.value)}
             />
             <Lable title="شماره تماس" />
             <Inputfield
               type="number"
               myclass=""
-              value={(e) => setPhone(e.target.value)}
+              value={phone}
+              insert={(e) => setPhone(e.target.value)}
             />
             <Lable title="ایمیل" />
             <Inputfield
               type="email"
               myclass=""
-              value={(e) => setEmail(e.target.value)}
+              value={email}
+              insert={(e) => setEmail(e.target.value)}
             />
             <Lable title="توضیحات" />
             <Textarea
               myclass=""
               placeholder="یادداشت درباره سفارش شما"
               rows="3"
-              value={(e) => setEmail(e.target.value)}
+              value={description}
+              insert={(e) => setDescription(e.target.value)}
             />
          
         </div>
         <div className="col-lg-6 col-md-7 col-sm-9 col-11 shadow mx-auto p-3 rounded mt-3">
           
             <div className="row pt-3">
-              <span class="col-4 text-center">محصول</span>
-              <span class="col text-center">قیمت</span>
-              <span class="col text-center">تعداد </span>
-              <span class="col text-center">جمع </span>
-              <hr class="col-10" />
+              <span className="col-4 text-center">محصول</span>
+              <span className="col text-center">قیمت</span>
+              <span className="col text-center">تعداد </span>
+              <span className="col text-center">جمع </span>
+              <hr className="col-10" />
             </div>
             <div className="row">
-              <span class="col-4 text-center"></span>
-              <span class="col text-center">2,700,000 </span>
-              <div class="col">
+              <span className="col-4 text-center"></span>
+              <span className="col text-center">2,700,000 </span>
+              <div className="col">
               <Inputfield
               type="number"
               myclass=""
-              value={(e) => setDigit(e.target.value)}
+              value={digit}
+              insert={(e) => setDigit(e.target.value)}
             />
               </div>
-              <span class="col text-center">2,700,000 </span>
-              <hr class="col-10 mt-n1" />
+              <span className="col text-center">2,700,000 </span>
+              <hr className="col-10 mt-n1" />
             </div>
             <div className="row">
-              <div class=" col-12 text-center">
+              <div className=" col-12 text-center">
                زرین پال
               </div>
-              <div class="col-12 pt-2 text-center">
-                <button type="submit" class="btn btn-green btn-block">ثبت سفارش</button>
+              <div className="col-12 pt-2 text-center">
+                <button type="submit" className="btn btn-green btn-block">ثبت سفارش</button>
               </div>
             </div>
           
