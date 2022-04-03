@@ -10,7 +10,7 @@ from django.contrib.auth.models import User
 
 # Create your views here.
 class PostList(ListAPIView):
-    queryset = Post.objects.all()
+    queryset = Post.objects.filter(status='published')
     serializer_class = PostSerializer
 
 class PostDetail(RetrieveAPIView):
@@ -37,5 +37,9 @@ class UserList(ListCreateAPIView):
 
 # shop 
 class ProductList(ListAPIView):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+
+class ProductDetail(RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer

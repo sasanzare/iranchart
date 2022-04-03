@@ -27,7 +27,7 @@ function App() {
         <Route path="/article/:id" element={<Article />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/courses" element={<Courses />} />
-        <Route path="/course" element={<Course />} />
+        <Route path="/course/:id" element={<Course />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<Order />} />
         <Route path="*"  element={<NotFound/>} />

@@ -4,11 +4,11 @@ import {useState, useEffect} from 'react'
 function Articleslist() {
   
     let content = null;
-    const [articles, setarticles] = useState(null);
+    const [articles, setArticles] = useState(null);
 
     useEffect( ()=>{
         axios.get('http://localhost:8000/api/v1/')
-        .then(resp =>setarticles(resp.data))
+        .then(resp =>setArticles(resp.data))
     },[]);
 
     if(articles) {
