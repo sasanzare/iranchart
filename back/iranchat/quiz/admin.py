@@ -6,7 +6,7 @@ from . import models
 @admin.register(models.Quiz)
 class QuizAdmin(admin.ModelAdmin):
 	search_fields = ['author', 'title']
-	list_display=['id', 'title','category','author', 'created']
+	list_display=['id', 'title','thumbnail_tag','category','author', 'created']
 	list_filter = ['author']
 
 class AnswerInline(admin.TabularInline):

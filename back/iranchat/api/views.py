@@ -5,7 +5,9 @@ from faq.models import FaqQuestion
 from contact.models import Contact
 from newsletter.models import Email
 from shop.models import Product
-from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer,ProductSerializer
+from map.models import Map
+from quiz.models import Quiz
+from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer,ProductSerializer,MapSerializer,QuizSerializer
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -43,3 +45,13 @@ class ProductList(ListAPIView):
 class ProductDetail(RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+
+# Map
+class MapList(ListAPIView):
+    queryset = Map.objects.all()
+    serializer_class = MapSerializer
+
+#Quiz
+class QuiztList(ListAPIView):
+    queryset = Quiz.objects.all()
+    serializer_class = QuizSerializer

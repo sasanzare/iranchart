@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'orders.apps.OrdersConfig',
     'newsletter.apps.NewsletterConfig',
+    'map.apps.MapConfig',
     'ckeditor',
     'ckeditor_uploader',
     'taggit',
