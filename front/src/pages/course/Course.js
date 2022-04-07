@@ -99,6 +99,9 @@ function Course() {
                   </div>
                 </div>
               </div>
+              <div className="col-12 pt-4 mt-2">
+              <Link to="/order" className="btn btn-block btn-green">ثبت نام دوره</Link>
+              </div>
             </div>
           </div>
           <div className="col-lg-3 text-center  pl-0 mr-n5 pr-3">

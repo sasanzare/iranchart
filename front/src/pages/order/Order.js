@@ -15,9 +15,10 @@ function Order() {
   return (
     <div className="Order container pt-5">
       <div className="row flex-column py-5">
+        
       <form>
         <div className="col-lg-6 col-md-7 col-sm-9 col-11 shadow mx-auto p-3 rounded">
-          
+        <h1 className=" text-center h5 text-green font-weight-bold">جزییات صورت حساب</h1>
             <Lable title="نام" />
             <Inputfield
               type="text"

@@ -13,6 +13,7 @@ import Courses from "./pages/courses/Courses";
 import Course from "./pages/course/Course";
 import Cart from "./pages/cart/Cart";
 import Order from "./pages/order/Order";
+import Quizzes from "./pages/quizzes/Quizzes";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/course/:id" element={<Course />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/order" element={<Order />} />
+        <Route path="/quizzes" element={<Quizzes />} />
         <Route path="*"  element={<NotFound/>} />
       </Routes>
       <Footer/>

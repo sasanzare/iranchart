@@ -244,6 +244,9 @@ a:hover {
 .radius-15 {
   border-radius: 15px!important;
 }
+.radius-20 {
+  border-radius: 20px;
+}
 .radius-25 {
   border-radius: 25px;
 }
@@ -285,6 +288,9 @@ a:hover {
 }
 .font-35 {
   font-size: 35px;
+}
+.font-70 {
+  font-size: 70px;
 }
 .font-100 {
   font-size: 100px;
@@ -691,19 +697,9 @@ button:focus  {
   right: -7px;
   font-size: 16px;
 }
-.js-rmp-rating-icons-list {
-  direction: ltr;
-}
-.math-captcha-form {
-  direction: ltr;
-  text-align: center;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-bottom: 0;
-}
-#wrap-submit-com .form-submit {
-  margin-bottom: 0;
-}
+
+
+
 @media screen and (max-width: 1199px) {
   .r-sits,
   .l-sits {
@@ -744,29 +740,7 @@ button:focus  {
     font-size: 1.5rem;
   }
 }
-@media screen and (max-width: 767px) {
-  .wrap-tabindex button:first-child,
-  .wrap-tabindex button:last-child {
-    border-radius: 0.3rem;
-  }
-  .order-1 {
-    order: 1;
-  }
-  .order-2 {
-    order: 2;
-  }
-  .order-3 {
-    order: 3;
-  }
-  .box-me {
-    margin-top: -40px;
-    margin-right: 0;
-    padding-top: 3rem !important;
-  }
-  .img-me {
-    z-index: 1;
-  }
-}
+
 
 /*editttttttttttttttttttttttttttttttttttttt*/
 
@@ -851,4 +825,26 @@ button:focus  {
 
 img{
   border-radius: 0.25rem;
+}
+
+.spinner {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border: 7px solid #29bc1e47;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 2s linear infinite;
+}
+.spinner__ball {
+  width:  18px;
+  height: 18px;
+  background-color: #29bc1ea3;
+  border-radius: 50%;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

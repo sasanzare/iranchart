@@ -48,5 +48,6 @@ class MapSerializer(serializers.ModelSerializer):
 class QuizSerializer(serializers.ModelSerializer):
     class Meta:
         model= Quiz
-        exclude = ['created','times_taken','author']
+        # exclude = ['created','times_taken','author']
+        fields = "__all__"
 

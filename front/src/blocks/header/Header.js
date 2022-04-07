@@ -5,10 +5,10 @@ function Header() {
   return (
     <div className="Header">
          <nav className="navbar navbar-expand-lg navbar-light bg-white position-fixed w-100 pos-nav z-10 shadow  p-lg-0 pr-lg-3 pl-lg-3">
-      <a className=" btn rounded-lg bg-green text-white  d-flex align-items-center p-0 px-2" href="tel:09365708700"><span className="ml-1">مشاوره سریع</span>
+      <a className=" btn rounded-lg  text-white btn-green d-flex align-items-center p-0 px-2" href="tel:09365708700"><span className="ml-1">مشاوره سریع</span>
       <FontAwesomeIcon
                 icon={faWhatsapp}
-                className="text-white h5 mt-2 p-0"
+                className="text-white h5 mt-2 p-0 btn-green radius-10"
             />
         </a>
       <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -28,7 +28,7 @@ function Header() {
               </li>
                            
               <li className="dropdown">
-                <Link to="/quiz" className="dropbtn bg-white border-0 d-block">کوییز</Link>
+                <Link to="/quizzes" className="dropbtn bg-white border-0 d-block">کوییز</Link>
           
               </li>
     

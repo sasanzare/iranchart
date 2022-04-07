@@ -24,7 +24,7 @@ class Quiz(models.Model):
 	category = models.ForeignKey(Category, related_name='quiz', on_delete=models.CASCADE,verbose_name='دسته بندی')
 	thumbnail = models.ImageField(upload_to='images',verbose_name='تصویر آزمون')
 	created = models.DateTimeField(auto_now_add=True,verbose_name='زمان ایجاد')
-	times_taken = models.IntegerField(default=0, editable=False,verbose_name='زمان گرفته شده')
+	# times_taken = models.IntegerField(default=0, editable=False,verbose_name='زمان گرفته شده')
 
 	@property
 	def question_count(self):
