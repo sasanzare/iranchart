@@ -1,12 +1,8 @@
 /*
-
 =========================================================
 * Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
-
-
 */
-
 "use strict";
 const d = document;
 d.addEventListener("DOMContentLoaded", function (event) {

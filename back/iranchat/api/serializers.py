@@ -5,7 +5,7 @@ from newsletter.models import Email
 from contact.models import Contact
 from shop.models import Product
 from map.models import Map
-from quiz.models import Quiz
+from quiz.models import Quiz,Question,Answer
 from django.contrib.auth.models import User
 
 class PostSerializer(serializers.ModelSerializer):
@@ -45,9 +45,21 @@ class MapSerializer(serializers.ModelSerializer):
         model= Map
         exclude = ['created','updated']
 
+# Quiz
 class QuizSerializer(serializers.ModelSerializer):
     class Meta:
         model= Quiz
         # exclude = ['created','times_taken','author']
+        fields = "__all__"
+
+class QuestionSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= Question
+        fields = "__all__"
+
+class QuestionOptionSerializer(serializers.ModelSerializer):
+    question = QuestionSerializer()
+    class Meta:
+        model= Answer
         fields = "__all__"
 

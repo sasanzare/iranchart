@@ -45,13 +45,14 @@ function Footer() {
                     </div>
                   </div>
                   <div className="row dir-ltr overflow-hidden">
-                    <div className="col-md-6 col-12 pt-2 wrap-cp pb-0 ">
-                      <p className=" text-white  pt-2  dir-ltr mb-1 text-md-left text-center mt-n1">کليه حقوق مادی و معنوی اين سایت متعلق به ایران چارت میباشد</p>
-                    </div>
-                    <div className="col-md-6 col-12 pt-2 wrap-cp pb-0">
-                      <p className="text-white  pt-2  dir-ltr mb-1 text-md-right text-center mt-n1">طراحی و توسعه توسط تاباویژن
+                  <div className="col-md-6 col-12 pt-2 wrap-cp pb-0">
+                      <p className="text-white  pt-2  dir-ltr mb-1 text-md-left text-center mt-n1">Website by <a className='text-warning font-weight-bold' href='https://sasanzare.ir/'>sasanzare.ir</a>
                       </p>
                     </div>
+                    <div className="col-md-6 col-12 pt-2 wrap-cp pb-0 ">
+                      <p className=" text-white  pt-2  dir-ltr mb-1 text-md-right text-center mt-n1">کليه حقوق مادی و معنوی اين سایت متعلق به ایران چارت میباشد</p>
+                    </div>
+                    
                   </div>
                 
                 

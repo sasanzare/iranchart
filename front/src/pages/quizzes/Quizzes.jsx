@@ -28,11 +28,17 @@ function Quizzes() {
       </div>
       <QuizzesList />
       <div className="row">
-        <p className="col-lg-6 col-md-8 col-sm-10 mx-auto font-30 text-left text-green font-weight-bold mb-0">&#10076;&#10076;</p>
-        <p className="col-12 mt-n5 text-green font-weight-bold text-center ">برای ماه شلیک کن حتی اگر از دست بدهید، در میان ستاره‌ها فرود خواهید آمد.
-        <span className="d-block text-dark font-11 mt-n2">bruce lee</span>
+        <p className="col-lg-6 col-md-8 col-sm-10 mx-auto font-30 text-left text-green font-weight-bold mb-0">
+          &#10076;&#10076;
         </p>
-        <p className="col-lg-6 col-md-8 col-sm-10 mx-auto font-30  text-green font-weight-bold mb-0 mt-n5">&#10075;&#10075;</p>
+        <p className="col-12 mt-n5 text-green font-weight-bold text-center ">
+          برای ماه شلیک کن حتی اگر از دست بدهید، در میان ستاره‌ها فرود خواهید
+          آمد.
+          <span className="d-block text-dark font-11 mt-n2">bruce lee</span>
+        </p>
+        <p className="col-lg-6 col-md-8 col-sm-10 mx-auto font-30  text-green font-weight-bold mb-0 mt-n5">
+          &#10075;&#10075;
+        </p>
       </div>
     </div>
   );
