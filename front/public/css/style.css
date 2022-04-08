@@ -286,8 +286,11 @@ a:hover {
 .font-25 {
   font-size: 25px;
 }
-.font-35 {
+.font-30 {
   font-size: 35px;
+}
+.font-30 {
+  font-size: 30px;
 }
 .font-70 {
   font-size: 70px;
