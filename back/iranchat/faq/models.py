@@ -3,7 +3,7 @@ from django.db import models
 # Create your models here.
 
 class FaqQuestion(models.Model):
-    question = models.TextField(verbose_name='سوال')
+    question = models.CharField(max_length=350,verbose_name='سوال')
     answer =  models.TextField(verbose_name='پاسخ')
     position = models.IntegerField(null=True,unique=True,verbose_name='موقعیت')
     created = models.DateTimeField(auto_now_add=True,verbose_name='زمان ایجاد')

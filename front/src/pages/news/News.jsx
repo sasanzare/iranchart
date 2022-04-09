@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChartLine } from "@fortawesome/free-solid-svg-icons";
+import NewsList from "../../blocks/newsList/NewsList";
 export default function News() {
   return (
     <div className="container pt-5">
       <div className="row  mt-5">
-        <div className="col-lg-9 col-12 pl-lg-5 pr-lg-1 ">
+        <div className="col-lg-9 col-12 pl-lg-5 pr-lg-1 pb-5">
           <div className="bg-dark radius-10 shadow py-3 px-2 d-flex">
-            <div>
+            <div className="col-10">
               <h1 className="h6 text-white text-right ">
                 تحلیل روزانه بازار‌های مالی
               </h1>
@@ -14,12 +17,15 @@ export default function News() {
                 باشید.
               </p>
             </div>
-            <div></div>
+            <div className="col-2 d-flex justify-content-end align-items-center">
+              <FontAwesomeIcon icon={faChartLine} className="text-white h1" />
+            </div>
           </div>
+          <NewsList />
         </div>
 
         <div className="col-lg-3 text-center  pl-0 mr-n5 pr-3">
-          <div className="shadow-sm radius-10 p-2 pr-3 pl-3 sidebar  pb-2 position-sticky ">
+          <div className="shadow-sm radius-10 p-2 pr-3 pl-3 sidebar  pb-2 ">
             <img src="/image/logo.png" width="80%" className="pb-3 pt-2" />
 
             <p className="pb-2">
@@ -40,7 +46,7 @@ export default function News() {
               تقویم اقتصادی
             </Link>
           </div>
-          <div className="shadow-sm radius-10 p-2 pr-3 pl-3 sidebar mt-3 pb-2 position-sticky ">
+          <div className="shadow-sm radius-10 p-2 pr-3 pl-3 sidebar mt-3 pb-2 ">
             <p className="pb-2 text-center text-green font-weight-bold">
               آخرین مقالات ایران چارت
             </p>

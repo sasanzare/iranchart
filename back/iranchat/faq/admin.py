@@ -5,5 +5,4 @@ from .models import FaqQuestion
 @admin.register(FaqQuestion)
 class FaqQuestionAdmin(admin.ModelAdmin):
     list_display =('question','answer','position')
-    list_filter = ('question','answer','position')
     search_fields = ('question','answer','position')

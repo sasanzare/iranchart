@@ -6,6 +6,7 @@ from contact.models import Contact
 from shop.models import Product
 from map.models import Map
 from quiz.models import Quiz,Question,Answer
+from news.models import News
 from django.contrib.auth.models import User
 
 class PostSerializer(serializers.ModelSerializer):
@@ -61,5 +62,11 @@ class QuestionOptionSerializer(serializers.ModelSerializer):
     question = QuestionSerializer()
     class Meta:
         model= Answer
+        fields = "__all__"
+
+# News
+class NewsSerializer (serializers.ModelSerializer):
+    class Meta:
+        model= News
         fields = "__all__"
 

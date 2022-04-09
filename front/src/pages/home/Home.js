@@ -16,7 +16,7 @@ function Home() {
                 className="d-block pb-5 m-auto pt-4 "
               />
 
-              <a className="m-auto text-center " href="https://iranchart.net">
+              <a className="m-auto text-center " target="_blank" href="https://www.litefinance.com/fa/?uid=207631786">"
                 <button type="button" className="btn whitebtn text-center ">
                   ثبت نام بروکر
                 </button>
@@ -27,11 +27,11 @@ function Home() {
             <div className="col-12 pr-0 pl-0 bg-white text-center r50 pb-4 ">
               <img
                 src="./image/fibo.png"
-                alt="liteforex"
+                alt="fg-farsi"
                 className="d-block pb-5 m-auto pt-4 "
               />
 
-              <a className="m-auto text-center " href="https://iranchart.net">
+              <a className="m-auto text-center " href="https://fg-farsi.com/?ref=IB_MARZIEHFALLAHI">
                 <button type="button" className="btn whitebtn text-center ">
                   ثبت نام بروکر
                 </button>
@@ -42,11 +42,11 @@ function Home() {
             <div className="col-12 pr-0 pl-0 bg-white text-center tlborder pb-4">
               <img
                 src="./image/amarket.png"
-                alt="liteforex"
+                alt="amarket"
                 className="d-block pb-5 m-auto pt-4"
               />
 
-              <a className="m-auto text-center " href="https://iranchart.net">
+              <a className="m-auto text-center " href="https://amarketsmoney.co/persia/?g=WBCA6">
                 <button type="button" className="btn whitebtn text-center ">
                   ثبت نام بروکر
                 </button>
@@ -57,11 +57,11 @@ function Home() {
             <div className="col-12 pr-0 pl-0 bg-white text-center blborder pb-4">
               <img
                 src="./image/alpari.png"
-                alt="liteforex"
+                alt="alpari"
                 className="d-block pb-5 m-auto pt-4 "
               />
 
-              <a className="m-auto text-center " href="https://iranchart.net">
+              <a className="m-auto text-center " href="https://alpariforex.org/fa/registration?cpa_partner_id=13420150">
                 <button type="button" className="btn whitebtn text-center ">
                   ثبت نام بروکر
                 </button>
@@ -87,11 +87,11 @@ function Home() {
             <div className="col-12 pr-0 pl-0 bg-white text-center brborder pb-4">
               <img
                 src="./image/alpari.png"
-                alt="liteforex"
+                alt="alpari"
                 className="d-block pb-5 m-auto pt-4"
               />
 
-              <a className="m-auto text-center " href="https://iranchart.net">
+              <a className="m-auto text-center " href="https://alpariforex.org/fa/registration?cpa_partner_id=13420150">
                 <button type="button" className="btn whitebtn text-center ">
                   ثبت نام بروکر
                 </button>

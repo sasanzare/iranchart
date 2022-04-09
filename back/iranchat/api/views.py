@@ -7,7 +7,8 @@ from newsletter.models import Email
 from shop.models import Product
 from map.models import Map
 from quiz.models import Quiz,Question,Answer
-from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer,ProductSerializer,MapSerializer,QuizSerializer,QuestionSerializer,QuestionOptionSerializer 
+from news.models import News
+from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer,ProductSerializer,MapSerializer,QuizSerializer,QuestionSerializer,QuestionOptionSerializer,NewsSerializer 
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -66,3 +67,9 @@ class QuestionOptionList(ListAPIView):
     queryset = Answer.objects.all()
     serializer_class = QuestionOptionSerializer 
     filterset_fields = ['question']
+
+# news
+class NewsList(ListAPIView):
+    queryset = News.objects.all()
+    serializer_class = NewsSerializer 
+    filterset_fields = ['date']
