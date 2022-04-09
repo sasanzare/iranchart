@@ -25,7 +25,6 @@ export default function NewsList(){
                 ))
            
         ):(
-            
             <Loading />
         )}
         </div>
