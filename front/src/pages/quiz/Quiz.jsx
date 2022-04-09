@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
+import Loading from "../../components/loading/Loading";
 
 export default function Quiz() {
   const { id } = useParams();
@@ -44,12 +45,7 @@ export default function Quiz() {
             </div>
           ))
         ) : (
-          <div className="col-12 d-flex flex-column align-items-center justify-content-center">
-            <div className="spinner d-flex align-items-center justify-content-center">
-              <div className="spinner__ball"></div>
-            </div>
-            <h6 className="dir-ltr mt-3">Loading...</h6>
-          </div>
+          <Loading/>
         )}
 
         {option.length > 0 ? (
@@ -74,12 +70,7 @@ export default function Quiz() {
             </div>
           </div>
         ) : (
-          <div className="col-12 d-flex flex-column align-items-center justify-content-center">
-            <div className="spinner d-flex align-items-center justify-content-center">
-              <div className="spinner__ball"></div>
-            </div>
-            <h6 className="dir-ltr mt-3">Loading...</h6>
-          </div>
+          <Loading/>
         )}
       </div>
     </div>

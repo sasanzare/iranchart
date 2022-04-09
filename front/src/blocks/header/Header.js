@@ -37,11 +37,11 @@ function Header() {
                 <Link className="dropbtn bg-white border-0 d-block" to="/courses" >دوره های آموزشی</Link>
                
                  </li><li className=" dropdown ">
-                <Link className="dropbtn bg-white border-0 d-block" to="" >تحلیل روزانه</Link>
+                <Link className="dropbtn bg-white border-0 d-block" to="/news" >تحلیل روزانه</Link>
                
                  </li>
                  <li className=" dropdown ">
-                  <Link className="dropbtn bg-white border-0 d-block" to="" >تقویم اقتصادی</Link>
+                  <a className="dropbtn bg-white border-0 d-block" href="/#coins" >تقویم اقتصادی</a>
                  
                    </li>
                    <li className=" dropdown ">
@@ -65,20 +65,20 @@ function Header() {
               </li>
              
               <li className="nav-item" >
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/#coins">
                     دوره های آموزشی
                   </Link>
                 </li>
              
               <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <Link className="nav-link" to="/news">
                     تحلیل روزانه
                   </Link>
               </li>
               <li className="nav-item">
-                  <Link className="nav-link" to="/">
+                  <a className="nav-link" href="/#coins">
                 تقویم اقتصادی
-                  </Link>
+                  </a>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" to="/about-us">

@@ -15,6 +15,7 @@ import Cart from "./pages/cart/Cart";
 import Order from "./pages/order/Order";
 import Quizzes from "./pages/quizzes/Quizzes";
 import Quiz from "./pages/quiz/Quiz";
+import News from "./pages/news/News";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/order" element={<Order />} />
         <Route path="/quizzes" element={<Quizzes />} />
         <Route path="/quiz/:id" element={<Quiz />} />
+        <Route path="/news" element={<News />} />
         <Route path="*"  element={<NotFound/>} />
       </Routes>
       <Footer/>

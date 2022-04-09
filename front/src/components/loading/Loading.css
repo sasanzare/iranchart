@@ -1,0 +1,21 @@
+.spinner {
+    position: relative;
+    width: 42px;
+    height: 42px;
+    border: 7px solid #29bc1e47;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 2s linear infinite;
+  }
+  .spinner__ball {
+    width:  18px;
+    height: 18px;
+    background-color: #29bc1ea3;
+    border-radius: 50%;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }

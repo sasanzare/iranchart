@@ -3,7 +3,9 @@ import QuizCard from "../../components/quizCard/QuizCard";
 import axios from "axios";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
+import Loading from "../../components/loading/Loading";
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
+
 
 
 const responsive = {
@@ -51,12 +53,7 @@ const QuizzesList = () => {
           ))}
         </Carousel>
       ) : (
-        <div className="d-flex flex-column align-items-center justify-content-center">
-          <div className="spinner d-flex align-items-center justify-content-center">
-            <div className="spinner__ball"></div>
-          </div>
-          <h6 className="dir-ltr mt-3">Loading...</h6>
-        </div>
+        <Loading/>
       )}
     </div>
   );

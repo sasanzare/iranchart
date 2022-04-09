@@ -104,7 +104,7 @@ function Home() {
           </h5>
         </div>
         <CourseList />
-        <div className="row">
+        <div id="coins" className="row pt-5">
           <div className="col-12 pt-5">
             <img className="w-100" src="./image/nemoodar.jpg" alt="iranchart" />
           </div>
