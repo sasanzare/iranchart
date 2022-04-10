@@ -13,7 +13,7 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model= Post
         # fields = "__all__"
-        exclude = ['status','updated','publish']
+        exclude = ['status','updated','publish','author','created']
 
 class FaqQuestionSerializer(serializers.ModelSerializer):
     class Meta:

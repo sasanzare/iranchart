@@ -13,7 +13,7 @@ export default function NewsCard(props) {
         lines={1}
         more="ادامه مطلب"
         less="بستن مطلب"
-        className="p-3 text-right "
+        className="p-3 text-right font-14"
         anchorClass="border px-2 py-1 radius-10 more"
         truncatedEndingComponent={"... "}
       >

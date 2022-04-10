@@ -2,9 +2,11 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 import NewsList from "../../blocks/newsList/NewsList";
+import LatestArticles from "../../components/latestArticles/LatestArticles";
 export default function News() {
+
   return (
-    <div className="container pt-5">
+    <div className="container py-5">
       <div className="row  mt-5">
         <div className="col-lg-9 col-12 pl-lg-5 pr-lg-1 pb-5">
           <div className="bg-dark radius-10 shadow py-3 px-2 d-flex">
@@ -46,11 +48,7 @@ export default function News() {
               تقویم اقتصادی
             </Link>
           </div>
-          <div className="shadow-sm radius-10 p-2 pr-3 pl-3 sidebar mt-3 pb-2 ">
-            <p className="pb-2 text-center text-green font-weight-bold">
-              آخرین مقالات ایران چارت
-            </p>
-          </div>
+          <LatestArticles />
         </div>
       </div>
     </div>

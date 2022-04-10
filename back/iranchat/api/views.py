@@ -15,6 +15,7 @@ from django.contrib.auth.models import User
 class PostList(ListAPIView):
     queryset = Post.objects.filter(status='published')
     serializer_class = PostSerializer
+    ordering_fields = ['created']
 
 class PostDetail(RetrieveAPIView):
     queryset = Post.objects.all()
@@ -42,6 +43,7 @@ class UserList(ListCreateAPIView):
 class ProductList(ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
+    ordering_fields = ['created']
 
 class ProductDetail(RetrieveAPIView):
     queryset = Product.objects.all()
@@ -73,3 +75,4 @@ class NewsList(ListAPIView):
     queryset = News.objects.all()
     serializer_class = NewsSerializer 
     filterset_fields = ['date']
+    ordering_fields = ['created']

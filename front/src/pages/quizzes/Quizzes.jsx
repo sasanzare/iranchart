@@ -1,13 +1,12 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBrain } from "@fortawesome/free-solid-svg-icons";
 import QuizzesList from "../../blocks/quizzesList/QuizzesList";
 import QuizCategory from "../../microComponents/quizCategory/QuizCategory";
+import Brain from './Quizzes.svg';
 function Quizzes() {
   return (
     <div className="Quizzes container pt-5">
       <div className="row pt-5">
         <div className="col-12 text-center">
-          <FontAwesomeIcon icon={faBrain} className="font-70 text-secondary" />
+          <img src={Brain} width={100} alt="Quiz" />
           <h1 className="h6 font-weight-bold pt-2">آزمون‌ها</h1>
           <p className="text-center mb-0">دانش تجارت خود را آزمایش کنید.</p>
           <p className="text-center col-lg-7 col-md-9 col-12 mx-auto">
