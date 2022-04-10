@@ -6,9 +6,9 @@ import Loading from "../../components/loading/Loading";
 
 export default function Quiz() {
   const { id } = useParams();
-  const QUIZ_URL = BASE_URL + "quizzes/?id=" + id;
+  const QUIZ_URL = BASE_URL + "quiz/" + id;
   const OPTION_URL = BASE_URL + "question-option/?question=" + id;
-
+  console.log(OPTION_URL)
   const [quiz, setQuiz] = useState([]);
   const [option, setOption] = useState([]);
   const getQuiz = async () => {
@@ -22,33 +22,31 @@ export default function Quiz() {
 
   useEffect(() => {
     getQuiz();
-    getOption();
+    // getOption();
   }, []);
   return (
     <div className="Quiz container pt-5">
       <div className="row py-5 mt-2 flex-column">
-        {quiz.length > 0 ? (
-          quiz.map((item) => (
+        {quiz.length != 0 ? (
             <div
-              key={item.id}
               className="col-lg-4 col-md-5 col-sm-7 col-8 mx-auto shadow p-0 overflow-hidden rounded"
             >
               <img
                 className="w-100 rounded-0 rounded-top"
                 height={150}
-                src={item.thumbnail}
-                alt={item.title}
+                src={quiz.thumbnail}
+                alt={quiz.title}
               />
               <p className="text-center text-green font-weight-bold h6 pt-2">
-                {item.title}
+                {quiz.title}
               </p>
             </div>
-          ))
+          
         ) : (
           <Loading/>
         )}
 
-        {option.length > 0 ? (
+        {/* {option.length > 0 ? (
           <div className="col-lg-4 col-md-5 col-sm-7 col-8 mx-auto pt-5">
             <div className="row">
               <div className="col border-left text-center">امتیاز شما
@@ -71,7 +69,7 @@ export default function Quiz() {
           </div>
         ) : (
           <Loading/>
-        )}
+        )} */}
       </div>
     </div>
   );

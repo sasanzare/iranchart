@@ -1,12 +1,14 @@
 import QuizzesList from "../../blocks/quizzesList/QuizzesList";
+import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 import QuizCategory from "../../microComponents/quizCategory/QuizCategory";
-import Brain from './Quizzes.svg';
+import Quiz from './Quizzes.svg';
+
 function Quizzes() {
   return (
     <div className="Quizzes container pt-5">
       <div className="row pt-5">
         <div className="col-12 text-center">
-          <img src={Brain} width={100} alt="Quiz" />
+          <img src={Quiz} width={100} alt="Quiz" />
           <h1 className="h6 font-weight-bold pt-2">آزمون‌ها</h1>
           <p className="text-center mb-0">دانش تجارت خود را آزمایش کنید.</p>
           <p className="text-center col-lg-7 col-md-9 col-12 mx-auto">
@@ -17,15 +19,15 @@ function Quizzes() {
         </div>
         <QuizCategory title="ویژه" />
       </div>
-      <QuizzesList />
+      <QuizzesList category={BASE_URL+'quizzes/?category=1&ordering=-created'} />
       <div className="row">
         <QuizCategory title="محبوب" />
       </div>
-      <QuizzesList />
+      <QuizzesList category={BASE_URL+'quizzes/?category=2&ordering=-created'} />
       <div className="row">
         <QuizCategory title="همه کوییز‌ها" />
       </div>
-      <QuizzesList />
+      <QuizzesList category={BASE_URL+'quizzes/?ordering=-created'} />
       <div className="row">
         <p className="col-lg-6 col-md-8 col-sm-10 mx-auto font-30 text-left text-green font-weight-bold mb-0">
           &#10076;&#10076;

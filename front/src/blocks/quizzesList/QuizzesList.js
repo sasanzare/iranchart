@@ -26,17 +26,17 @@ const responsive = {
     items: 2,
   },
 };
-const API_URL = BASE_URL + "quizzes/";
 
-const QuizzesList = () => {
+
+export default function QuizzesList(props){
   const [quizzis, setQuizzis] = useState([]);
-  const fetchData = async () => {
-    const { data } = await axios.get(API_URL);
+  const getQuizzis = async () => {
+    const { data } = await axios.get(props.category);
     setQuizzis(data);
   };
 
   useEffect(() => {
-    fetchData();
+    getQuizzis();
   }, []);
 
   return (
@@ -58,4 +58,4 @@ const QuizzesList = () => {
     </div>
   );
 };
-export default QuizzesList;
+

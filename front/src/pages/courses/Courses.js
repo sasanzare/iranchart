@@ -4,7 +4,7 @@ function Courses() {
     <div className="Course">
       <div className="container pt-5">
         <div className="row  mt-5">
-          <h1 class="col-12 h4 text-center pb-3">
+          <h1 className="col-12 h4 text-center pb-3">
                 دروه‌های آموزشی
           </h1>
           

@@ -1,6 +1,7 @@
 import Articleslist from "../../blocks/articleslist/Articlesist";
 import Articlecontent from "../../components/articlecontent/Articlecontent";
 import { useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 function Article() {
   const { id } = useParams();
   return (
@@ -18,36 +19,36 @@ function Article() {
                 فارکــــــس در تلاش اســـت تا بهـترین متد های بـازار جهانی فارکس
                 مخاطبان خـود را آشنا ساخته و آمــوزش های کاملی را ارئه کنــــد
               </p>
-              <a
+              <Link
                 className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="https://iranchart.net/courses"
+                to="/courses"
               >
                 دوره های آموزشی
-              </a>
-              <a
+              </Link>
+              <Link
                 className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="https://iranchart.net/daily-trade"
+                to="/news"
               >
                 تحلیل روزانه
-              </a>
+              </Link>
               <a
                 className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="https://iranchart.net/Economic-calendar"
+                href="/#coins"
               >
                 تقویم اقتصادی
               </a>
               <a
                 className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="https://iranchart.net"
+                href="=#"
               >
                 ثبت نام بروکر
               </a>
-              <a
+              <Link
                 className=" btn btn-block radius-10 cs-color cs-br-color "
-                href="htps://iranchart.net/quiz"
+                to="/quizzes"
               >
                 کوییز
-              </a>
+              </Link>
             </div>
           </div>
           <h5 className="text-center pb-3 pt-5 mt-3  col-12">مقالات مشابه</h5>

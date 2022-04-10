@@ -1,15 +1,13 @@
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChartLine } from "@fortawesome/free-solid-svg-icons";
 import NewsList from "../../blocks/newsList/NewsList";
 import LatestArticles from "../../components/latestArticles/LatestArticles";
+import Chart from './News.svg'
 export default function News() {
-
   return (
     <div className="container py-5">
       <div className="row  mt-5">
         <div className="col-lg-9 col-12 pl-lg-5 pr-lg-1 pb-5">
-          <div className="bg-dark radius-10 shadow py-3 px-2 d-flex">
+          <div className="bg-dark radius-10 shadow py-3 px-2 d-flex align-items-center">
             <div className="col-10">
               <h1 className="h6 text-white text-right ">
                 تحلیل روزانه بازار‌های مالی
@@ -20,7 +18,7 @@ export default function News() {
               </p>
             </div>
             <div className="col-2 d-flex justify-content-end align-items-center">
-              <FontAwesomeIcon icon={faChartLine} className="text-white h1" />
+              <img src={Chart} alt="Chart" />
             </div>
           </div>
           <NewsList />

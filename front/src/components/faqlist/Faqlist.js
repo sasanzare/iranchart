@@ -19,21 +19,21 @@ export default function Faqlist() {
         list.map((faq) => (
           <div
             key={faq.position}
-            className="card mb-2 border border-dark radius-15"
+            className="card mb-2 border radius-15"
           >
             <div
               id={"heading" + faq.position}
               className="card-header bg-white pr-0 "
             >
-              <h4 className="mr-3 text-right my-1">
-                <span
-                  className="pr-0 btn photo-grey text-right collapsed"
-                  data-toggle="collapse"
+              <h4 className="mr-3 text-right my-1 h6 font-weight-bold text-green"
+              
+              data-toggle="collapse"
                   data-target={"#collapse" + faq.position}
                   aria-expanded="false"
-                >
+              >
+                
                   {faq.question}
-                </span>
+                
               </h4>
             </div>
             <div

@@ -1,6 +1,5 @@
 from django.urls import path,include
-from .views import PostList,PostDetail,FaqList,UserList,ContactList,EmailList,ProductList,ProductDetail,MapList,QuiztList,QuestionList,QuestionOptionList,NewsList
-
+from .views import PostList,PostDetail,FaqList,UserList,ContactList,EmailList,ProductList,ProductDetail,MapList,QuizList,QuestionList,QuestionOptionList,NewsList,QuizDetail
 app_name = 'api'
 
 urlpatterns = [
@@ -12,7 +11,8 @@ urlpatterns = [
     path('v1/newsletter', EmailList.as_view(), name='email-list'),
     path('v1/products', ProductList.as_view(), name='product-list'),
     path('v1/product/<int:pk>', ProductDetail.as_view(), name='product-detail'),
-    path('v1/quizzes/', QuiztList.as_view(), name='Quiz-list'),
+    path('v1/quizzes/', QuizList.as_view(), name='Quiz-list'),
+    path('v1/quiz/<int:pk>', QuizDetail.as_view(), name='Quiz-detail'),
     path('v1/question/', QuestionList.as_view(), name='question-list'),
     path('v1/question-option/', QuestionOptionList.as_view(), name='question-option'),
     path('v1/news/', NewsList.as_view(), name='news-list'),

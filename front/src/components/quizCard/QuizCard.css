@@ -1,4 +1,3 @@
-
 .img-filter{
     -webkit-filter:  brightness(50%);
     filter: brightness(50%);
@@ -6,7 +5,6 @@
     transition: .3s ease-in-out;
 
 }
-
 .title-filter{
     -webkit-filter:  brightness(100%);
     filter: brightness(100%);
@@ -14,13 +12,16 @@
     margin-bottom: 2.7rem;
     font-size: 15px;
     width: fit-content;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height: 42px;
+    line-height: 1.5!important;
 
 }
 .img-filter:hover{
     filter: brightness(90%);
 
 }
-/* .title-filter:hover {
-    filter: brightness(%);
-
-} */

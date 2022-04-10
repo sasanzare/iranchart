@@ -35,7 +35,7 @@ function Footer() {
                       <hr className="bg-white"/>
                       <ul className="list-group text-right f-list p-0">
                         <li className="list-group-item"><a href="#" className="text-white btn w-100 text-md-right radius-25">پشتیــــبانی تلـــــگرام</a></li>
-                        <li className="list-group-item"><a href="#" className="text-white btn w-100 text-md-right radius-25">پشتیــــبانی واتســاپ</a></li>
+                        <li className="list-group-item"><a href="tel:09365708700" className="text-white btn w-100 text-md-right radius-25">پشتیــــبانی واتســاپ</a></li>
                         <li className="list-group-item"><Link to="/faq" className="text-white btn w-100 text-md-right radius-25">سوالات متداول</Link></li>
                         <li className="list-group-item"><a href="#" className="text-white btn w-100 text-md-right radius-25">تحلــــــــیل روزانـــــــــــه</a></li>
                         <li className="list-group-item"><a href="#" className="text-white btn w-100 text-md-right radius-25">کانال وی آی پی تلگرام</a></li>        

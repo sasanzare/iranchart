@@ -7,17 +7,17 @@ function Faq() {
         <div className="row  mt-5 pb-5">
           <div className="col-lg-9 col-12 pl-lg-5 pr-lg-1">
             <div className="text-right p-3 shadow-sm radius-10">
-              <a href="https://iranchart.net" className="ml-3">
+              <Link to="/" className="ml-3">
                 ایران چارت
-              </a>
+              </Link>
               <span>&gt;</span>
 
-              <a href="https://iranchart.net" className="mr-3">
+              <Link to="/faq" className="mr-3">
                 سوالات متداول
-              </a>
+              </Link>
             </div>
             <div className="text-center p-3 shadow-sm radius-10 mt-3 wrapper-articel">
-              <h1 className="h4 text-center pb-3">
+              <h1 className="h5 text-center pb-3">
                 سوالات متداول سامانه ایران چارت
               </h1>
               <div className="row ">
@@ -48,12 +48,12 @@ function Faq() {
               >
                 تحلیل روزانه
               </Link>
-              <Link
+              <a
                 className=" btn btn-block radius-10 cs-color cs-br-color "
-                to="/#coins"
+                href="/#coins"
               >
                 تقویم اقتصادی
-              </Link>
+              </a>
             </div>
           </div>
         </div>

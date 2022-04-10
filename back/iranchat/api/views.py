@@ -8,7 +8,7 @@ from shop.models import Product
 from map.models import Map
 from quiz.models import Quiz,Question,Answer
 from news.models import News
-from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer,ProductSerializer,MapSerializer,QuizSerializer,QuestionSerializer,QuestionOptionSerializer,NewsSerializer 
+from .serializers import PostSerializer,UserSerializer,FaqQuestionSerializer,ContactSerializer,EmailSerializer,ProductSerializer,MapSerializer,QuizSerializer,QuestionSerializer,QuestionOptionSerializer,NewsSerializer
 from django.contrib.auth.models import User
 
 # Create your views here.
@@ -55,10 +55,15 @@ class MapList(ListAPIView):
     serializer_class = MapSerializer
 
 #Quiz
-class QuiztList(ListAPIView):
+class QuizList(ListAPIView):
     queryset = Quiz.objects.all()
     serializer_class = QuizSerializer
-    filterset_fields = ['id']
+    filterset_fields = ['category']
+    ordering_fields = ['created']
+
+class QuizDetail(RetrieveAPIView):
+    queryset = Quiz.objects.all()
+    serializer_class = QuizSerializer
 
 class QuestionList(ListAPIView):
     queryset = Question.objects.all()

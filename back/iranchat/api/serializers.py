@@ -5,7 +5,7 @@ from newsletter.models import Email
 from contact.models import Contact
 from shop.models import Product
 from map.models import Map
-from quiz.models import Quiz,Question,Answer
+from quiz.models import Category,Quiz,Question,Answer
 from news.models import News
 from django.contrib.auth.models import User
 
@@ -47,7 +47,14 @@ class MapSerializer(serializers.ModelSerializer):
         exclude = ['created','updated']
 
 # Quiz
+
+# class QuizCategorySerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model= Category
+#         fields = ['name']
+
 class QuizSerializer(serializers.ModelSerializer):
+    # category = QuizCategorySerializer()
     class Meta:
         model= Quiz
         # exclude = ['created','times_taken','author']
