@@ -1,5 +1,6 @@
 import { useState,useEffect } from "react";
 import EmailPatter from "../../microComponents/emailpatter/Emailpatter";
+import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 function Contactform() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -7,6 +8,7 @@ function Contactform() {
   const [message, setMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [correctsubmit, setCorrectsubmit] = useState(false);
+  
 
   useEffect(() => {
     setTimeout(()=>setCorrectsubmit(false), 4000);
@@ -26,7 +28,7 @@ function Contactform() {
       }),
     };
 
-    fetch("http://localhost:8000/api/v1/contact", requestOptions)
+    fetch(BASE_URL+"contact", requestOptions)
       .then(async (response) => {
         const isJson = response.headers
           .get("content-type")

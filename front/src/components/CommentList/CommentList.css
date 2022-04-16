@@ -1,0 +1,41 @@
+.comments {
+    border-right: solid 2px #ccc;
+    padding-right:20px;
+} 
+.comment-name{
+    border-radius: 10px 10px 0 0;
+    border: solid 1px #ccc;
+    border-bottom: none;
+}
+.comments p {
+    background-color: #fff;
+    border-radius: 0 0 10px 10px ;
+    padding: 10px;
+    font-size: 13px;
+    border: solid 1px #ccc;
+    border-top: none;
+    line-height: 1.7!important;
+    position: relative;
+}
+.comments p::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    display: block;
+    border: 3px solid #ccc;
+    border-radius: 50%;
+    background-color: #29bc1e;
+    top: 13px;
+    right: -27px;
+}
+.comments p::after {
+    content: '';
+    position: absolute;
+    border: solid 8px;
+    border-color: transparent #29bc1e transparent transparent;
+    top: 10px;
+    right: -17px;
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}

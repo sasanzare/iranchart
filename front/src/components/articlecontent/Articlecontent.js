@@ -8,7 +8,7 @@ import Loading from "../loading/Loading";
 export default function Articlecontent(props) {
   const [article, setarticle] = useState([]);
   //     content = article.body.replace('src=\"/', 'src="' + BaseURLBack);
- 
+
   const getArticle = async () => {
     const { data } = await axios.get(BASE_URL + props.id);
     setarticle(data);
@@ -19,7 +19,7 @@ export default function Articlecontent(props) {
   }, [props.id]);
 
   return (
-    <div className="Articlecontent col-lg-9 col-12 pl-lg-5 pr-lg-1">
+    <div className="Articlecontent">
       <div className="text-right p-3 shadow-sm radius-10">
         <Link to="/" className="ml-3">
           ایران چارت
@@ -45,7 +45,7 @@ export default function Articlecontent(props) {
             />
             <div
               className="text-justify pb-3 pt-3"
-              dangerouslySetInnerHTML={{ __html: article.content }}
+              dangerouslySetInnerHTML={{ __html: article.body }}
             ></div>
           </div>
         ) : (

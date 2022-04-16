@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Inputfield from "../inputfield/Inputfield";
 import EmailPatter from "../../microComponents/emailpatter/Emailpatter";
+import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
+
 function Newsletter() {
   const [email, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -16,7 +18,7 @@ function Newsletter() {
       }),
     };
 
-    fetch("http://localhost:8000/api/v1/newsletter", requestOptions)
+    fetch(BASE_URL+"newsletter", requestOptions)
       .then(async (response) => {
         const isJson = response.headers
           .get("content-type")
