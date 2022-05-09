@@ -9,7 +9,6 @@ function Inputfield(props) {
         onInput={(e) => props.insert(e)}
         placeholder={props.placeholder}
         required={props.required}
- 
       />
     </div>
   );

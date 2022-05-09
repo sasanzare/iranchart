@@ -16,7 +16,7 @@ function Home() {
                 className="d-block pb-5 m-auto pt-4 "
               />
 
-              <a className="m-auto text-center " target="_blank" href="https://www.litefinance.com/fa/?uid=207631786">"
+              <a className="m-auto text-center " target="_blank" href="https://www.litefinance.com/fa/?uid=207631786">
                 <button type="button" className="btn whitebtn text-center ">
                   ثبت نام بروکر
                 </button>

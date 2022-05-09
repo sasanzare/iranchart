@@ -40,13 +40,11 @@ function Footer() {
                         <li className="list-group-item"><a href="#" className="text-white btn w-100 text-md-right radius-25">تحلــــــــیل روزانـــــــــــه</a></li>
                         <li className="list-group-item"><a href="#" className="text-white btn w-100 text-md-right radius-25">کانال وی آی پی تلگرام</a></li>        
                       </ul>
-
-
                     </div>
                   </div>
                   <div className="row dir-ltr overflow-hidden">
                   <div className="col-md-6 col-12 pt-2 wrap-cp pb-0">
-                      <p className="text-white  pt-2  dir-ltr mb-1 text-md-left text-center mt-n1">Website by <a className='text-warning font-weight-bold' href='https://sasanzare.ir/'>sasanzare.ir</a>
+                      <p className="text-white  pt-2  dir-ltr mb-1 text-md-left text-center mt-n1">Website by <a className='text-warning font-weight-bold' target="_blank" href='https://sasanzare.ir/'>sasanzare.ir</a>
                       </p>
                     </div>
                     <div className="col-md-6 col-12 pt-2 wrap-cp pb-0 ">

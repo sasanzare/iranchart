@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function Faq() {
   return (
     <div className="Faq">
-      <div className="container pt-5 vh-100">
+      <div className="container pt-5">
         <div className="row  mt-5 pb-5">
           <div className="col-lg-9 col-12 pl-lg-5 pr-lg-1">
             <div className="text-right p-3 shadow-sm radius-10">
