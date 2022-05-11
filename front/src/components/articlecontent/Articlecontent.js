@@ -8,7 +8,7 @@ import Loading from "../loading/Loading";
 export default function Articlecontent(props) {
   const [article, setarticle] = useState([]);
   //     content = article.body.replace('src=\"/', 'src="' + BaseURLBack);
-
+  
   const getArticle = async () => {
     const { data } = await axios.get(BASE_URL + props.id);
     setarticle(data);
@@ -43,9 +43,10 @@ export default function Articlecontent(props) {
               alt={article.title}
               className="w-100"
             />
+           
             <div
               className="text-justify pb-3 pt-3"
-              dangerouslySetInnerHTML={{ __html: article.body }}
+              dangerouslySetInnerHTML={{ __html: article.body.replace('src=\"/', 'src="http://localhost:8000/') }}
             ></div>
           </div>
         ) : (
