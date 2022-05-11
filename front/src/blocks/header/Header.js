@@ -2,6 +2,9 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 function Header() {
+  function closeNav(){
+     document.getElementById("navbarSupportedContent").classList.remove("show");
+  }
   return (
     <div className="Header">
       <nav className="navbar navbar-expand-lg navbar-light bg-white position-fixed w-100 pos-nav z-10 shadow  p-lg-0 pr-lg-3 pl-lg-3">
@@ -91,51 +94,51 @@ function Header() {
             </ul>
             <ul className="navbar-nav mr-auto text-right justify-content-lg-center pr-2 pt-3  d-lg-none">
               <li className="nav-item">
-                <Link className="nav-link" to="/">
+                <Link className="nav-link" onClick={closeNav} to="/">
                   خانه
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/quizzes">
+                <Link className="nav-link" onClick={closeNav} to="/quizzes">
                   کوییز
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/courses">
+                <Link className="nav-link" onClick={closeNav} to="/courses">
                   دوره های آموزشی
                 </Link>
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/news">
+                <Link className="nav-link" onClick={closeNav} to="/news">
                   تحلیل روزانه
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <a className="nav-link" href="/#coins">
                   تقویم اقتصادی
                 </a>
-              </li>
+              </li> */}
              
             
               <li className="nav-item">
-                <Link className="nav-link" to="/articles">
+                <Link className="nav-link" onClick={closeNav} to="/articles">
                   مجله ایران چارت
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/faq">
+                <Link className="nav-link" onClick={closeNav} to="/faq">
  سوالات متداول
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/contact-us">
+                <Link className="nav-link" onClick={closeNav} to="/contact-us">
                   ارتباط با ما
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about-us">
+                <Link className="nav-link" onClick={closeNav} to="/about-us">
                   درباره ما
                 </Link>
               </li>
