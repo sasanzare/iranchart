@@ -366,7 +366,7 @@ body.popup .submit-row {
 }
 
 .vForeignKeyRawIdAdminField {
-    width: 5em;
+    width: auto;
 }
 
 /* INLINES */
