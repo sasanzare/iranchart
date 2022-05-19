@@ -8,13 +8,13 @@ function Footer() {
                     <div className="col-md-6 col-sm-6 pb-4 text-center">
                       <h5 className="text-white text-md-right  ">درباره ایران چارت</h5>
                       <hr className="bg-white"/>
-                      <p className="text-md-right text-justify text-white ">
+                      <p className=" text-justify text-white ">
                         تیم تخصصی ایرانچارت با هدف آمـــــوزش در زمیـنه ی فارکــس در تلاش اســـــت تا با بهـــترین متد های بــــازار 
                         جهانی فارکس مخاطبان خود را آشنا ساخته و آمـــــوزش های کاملی را ارئه کنــــد، از این رو همــــیشه در تلــاش 
                         هستیم تا آموزش های خودمـــــان را آپدیت کرده و اطـــلاعات جامعی را در اختیــار هموطـــنان عزیــــزمان قــــرار 
                         دهیم و در این مسیر پرریسک به عنوان یک همراه قابل اعـــــتماد همــــیشه در کنار شما عزیزان هستـیم تا با 
                         آرامش خـــاطر فارکس را آموزش ببـــــینید و نهــایت تلاش خودمان را در جـــهت موفقیت شما در کــوتاه تــــرین 
-                        زمان خواهیم کرد
+                      زمان خواهیم کرد.
                       </p>
                       
                           </div>
@@ -48,7 +48,9 @@ function Footer() {
                       </p>
                     </div>
                     <div className="col-md-6 col-12 pt-2 wrap-cp pb-0 ">
-                      <p className=" text-white  pt-2  dir-ltr mb-1 text-md-right text-center mt-n1">کليه حقوق مادی و معنوی اين سایت متعلق به ایران چارت میباشد</p>
+                      <p className=" text-white  pt-2 mb-1 text-md-right text-center mt-n1"> کليه حقوق مادی و معنوی اين سایت متعلق به
+                      <Link className='text-warning font-weight-bold'  to='/'> ایران چارت </Link>
+                       می باشد.</p>
                     </div>
                     
                   </div>
