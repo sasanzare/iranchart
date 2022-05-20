@@ -73,6 +73,7 @@ class QuestionList(ListAPIView):
 class QuestionOptionList(ListAPIView):
     queryset = Answer.objects.all()
     serializer_class = QuestionOptionSerializer 
+    # filterset_fields = ['question']
     filterset_fields = ['question']
 
 # news
