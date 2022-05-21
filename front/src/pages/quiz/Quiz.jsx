@@ -11,7 +11,7 @@ export default function Quiz() {
   const QUIZ_URL = BASE_URL + "quiz/" + id;
   const QUESTIONS_URL = BASE_URL + "question/?quiz=" + id;
   const OPTION_URL = BASE_URL + "question-option/?question=" + id;
- 
+
   const [quiz, setQuiz] = useState([]);
   const [question, setQuestion] = useState([]);
   const [option, setOption] = useState([]);
@@ -43,35 +43,33 @@ export default function Quiz() {
     <div className="Quiz container pt-5">
       <div className="row py-5 mt-2 flex-column">
         {quiz.length != 0 ? (
-            <div
-              className="col-lg-4 col-md-5 col-sm-7 col-8 mx-auto shadow p-0 overflow-hidden rounded"
-            >
-              <img
-                className="w-100 rounded-0 rounded-top"
-                height={150}
-                src={quiz.thumbnail}
-                alt={quiz.title}
-              />
-              <h1 className="text-center text-green font-weight-bold h6 pt-3 pb-1">
-                {quiz.title}
-              </h1>
-            </div>
-          
+          <div className="col-lg-4 col-md-5 col-sm-7 col-8 mx-auto shadow p-0 overflow-hidden rounded">
+            <img
+              className="w-100 rounded-0 rounded-top"
+              height={150}
+              src={quiz.thumbnail}
+              alt={quiz.title}
+            />
+            <h1 className="text-center text-green font-weight-bold h6 pt-3 pb-1">
+              {quiz.title}
+            </h1>
+          </div>
         ) : (
-          <Loading/>
+          <Loading />
         )}
 
-         {question.length > 0 ? (
-          <div className="col-lg-4 col-md-5 col-sm-7 col-8 mx-auto pt-5">
+        {question.length > 0 ? (
+          <div className=" col-12 pt-5">
             <div className="row">
-              <div className="col border-left text-center">
+              <div className="col-8 d-flex mx-auto justify-content-center">
+              <div className="col-md-4 border-left text-center">
                 <span>امتیاز شما</span>
                 <div className="d-flex justify-content-between">
-                <Incorrect title={inCorrect} />
-                <Correct title={correct} />
+                  <Incorrect title={inCorrect} />
+                  <Correct title={correct} />
                 </div>
               </div>
-              <div className="col text-center">
+              <div className="col-md-4  text-center">
                 سوال 1/{question.length}
                 <div className="progress radius-10">
                   <div
@@ -84,15 +82,52 @@ export default function Quiz() {
                   ></div>
                 </div>
               </div>
-              <div className="col-12 py-3">
-                <h2 className="h6 text-center font-weight-bold">{question[counter]["prompt"]}</h2>
-                
+              </div>
+              <div className="col-lg-6 col-md-8 col-12 py-3 mx-auto">
+                <h2 className="h6 text-center font-weight-bold">
+                  {question[counter]["prompt"]}
+                </h2>
+
+                <form>
+                  <div
+                    className=" d-flex flex-column"
+                    data-toggle-name="is_private"
+                    data-toggle="buttons-radio"
+                  >
+                    <button
+                      type="button"
+                      value="0"
+                      className="btn radius-20 border mt-3"
+                      data-toggle="button"
+                    >
+                      BTC
+                    </button>
+                    <button
+                      type="button"
+                      value="1"
+                      className="btn radius-20 border mt-3"
+                      data-toggle="button"
+                    >
+                      ETH
+                    </button>
+                    <button
+                      type="button"
+                      value="2"
+                      className="btn radius-20 border mt-3"
+                      data-toggle="button"
+                    >
+                      SOL
+                    </button>
+                  </div>
+                  <input type="hidden" name="is_private" value="0" />
+                </form>
               </div>
             </div>
           </div>
+          
         ) : (
-          <Loading/>
-        )} 
+          <Loading />
+        )}
       </div>
     </div>
   );
