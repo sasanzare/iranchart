@@ -1,0 +1,17 @@
+.selector-item_radio {
+    appearance: none;
+}
+.selector-item_label {
+    line-height: 250%;
+    transition-duration: 0.5s;
+    transition-property: transform, color, box-shadow;
+    transform: none;
+    border: 1px solid #dee2e6;
+}
+.selector-item_radio:checked + .selector-item_label {
+    background-color: #29bc1e;
+    color: #fff;
+    box-shadow: 0 0 4px rgba(133, 133, 133, 0.5), 0 2px 4px rgba(0, 0, 0, 0.5);
+    transform: translateY(-2px);
+    border-color: #29bc1e;
+}

@@ -1,13 +1,13 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faXmarkSquare } from "@fortawesome/free-solid-svg-icons";
-export default function Incorrect(props){
+import {faCheckSquare } from "@fortawesome/free-solid-svg-icons";
+export default function Correct(props){
     return(
         <div className="d-flex">
           <FontAwesomeIcon
-            icon={faXmarkSquare}
-            className="h5"
+            icon={faCheckSquare}
+            className="h5 text-green"
           />
-          <span className="text-right mt-1  mr-2 font-weight-bold">{props.title}</span>
+          <span className="text-right mt-1   mr-2 font-weight-bold">{props.title}</span>
         </div>
     );
 }
