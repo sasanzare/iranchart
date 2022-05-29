@@ -1,13 +1,19 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 import Loading from "../../components/loading/Loading";
 import Incorrect from "../../microComponents/incorrect/Incorrect";
 import Correct from "../../microComponents/correct/Correct";
-
+import SourcePost from "../../components/sourcePost/SourcePost";
 // import Option from "../../microComponents/option/Option"
 import { Styles } from "./Quiz.css";
+
+let right = 0;
+let wrongCounter = 0;
+let posts = new Array();
+
 
 export default function Quiz() {
   const { id } = useParams();
@@ -21,11 +27,12 @@ export default function Quiz() {
   const [counter, setCounter] = useState(1);
   const [correct, setCorrect] = useState(0);
   const [inCorrect, setInCorrect] = useState(0);
-
   const [percent, setPercent] = useState(0);
+  const [show, setShow] = useState(false);
+
+
 
   const OPTIONS_URL = BASE_URL + "question-option/?question=" + counter;
-  let right = "";
 
   const getQuiz = async () => {
     const { data } = await axios.get(QUIZ_URL);
@@ -39,6 +46,11 @@ export default function Quiz() {
   const getOptions = async () => {
     const { data } = await axios.get(OPTIONS_URL);
     setOptions(data);
+  };
+
+  const getIdPost = async (postId) => {
+    const { data } = await axios.get(BASE_URL + postId);
+    posts.push(data);
   };
 
   useEffect(() => {
@@ -57,7 +69,13 @@ export default function Quiz() {
         right = option.text;
       }
     });
-    select == right ? setCorrect(correct + 1) : setInCorrect(inCorrect + 1);
+    if (select == right) {
+      setCorrect(correct + 1);
+    } else {
+      setInCorrect(inCorrect + 1);
+      getIdPost(question[wrongCounter]["psot"]);
+    }
+    wrongCounter++;
   }
 
   const width = parseFloat(100 / percent);
@@ -66,30 +84,20 @@ export default function Quiz() {
   const nextOption = () => {
     if (percent > counter) {
       count++;
-      setCounter(counter + 1);
       corrector();
-
+      setCounter(counter + 1);
       document.querySelector(".progress-bar").style.width = width * count + "%";
     } else if (percent == counter) {
       corrector();
-      document.querySelector(".context").innerHTML = `<div class=" col-lg-8 col-12 mx-auto">
-      <div class="row">
-        <div class="col-12 py-4 bg-green radius-10 text-white text-center">
-          <h4 class="h6   font-weight-bold">
-          امتیاز شما ${correct} از ${question.length}
-          </h4>
-          <p class="text-center mb-0 font-weight-bold">
-            برای پاسخ‌های اشتباه شما مقالاتی را پیشنهاد می کنیم که با مطالعه آن‌ها دانش کافی را بدست آورید.
-          </p>
-        </div>
-      </div>
-    </div>`;
+      document.getElementById("context").remove();
+      setShow(true);
+    
     }
   };
 
   return (
     <div className="Quiz container pt-5">
-      <div className="row py-5 mt-2 flex-column context">
+      <div id="context" className="row py-5 mt-2 flex-column">
         {quiz.length != 0 ? (
           <div className="col-lg-4 col-md-5 col-sm-7 col-8 mx-auto shadow p-0 overflow-hidden rounded">
             <img
@@ -177,11 +185,24 @@ export default function Quiz() {
         ) : (
           <Loading />
         )}
-
-       
-
-
       </div>
+
+      {show === true ? (
+        <div className="row py-5 mt-2">
+          <div className=" col-lg-8 col-12 mx-auto">
+              <div className="py-4 bg-green radius-10 text-white text-center">
+                <h4 className="h6   font-weight-bold">
+                  امتیاز شما {correct} از {question.length}
+                </h4>
+                <p className="text-center mb-0 font-weight-bold">
+                  برای پاسخ‌های اشتباه شما مقالاتی را پیشنهاد می کنیم که با
+                  مطالعه آن‌ها دانش کافی را بدست آورید.
+                </p>
+              </div>
+          </div>
+          <SourcePost list={posts} />
+        </div>
+      ) : null}
     </div>
   );
 }
