@@ -1,0 +1,12 @@
+.box-context{
+  height: 70px;
+}
+.box-context p{
+    height: 20px;
+}
+.box-context p > p{
+    font-size: 11px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

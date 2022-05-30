@@ -12,9 +12,7 @@ import { Styles } from "./Quiz.css";
 
 let right = 0;
 let wrongCounter = 0;
-let posts = new Array();
-
-
+let count = 1;
 export default function Quiz() {
   const { id } = useParams();
   const QUIZ_URL = BASE_URL + "quiz/" + id;
@@ -23,12 +21,16 @@ export default function Quiz() {
   const [quiz, setQuiz] = useState([]);
   const [question, setQuestion] = useState([]);
   const [options, setOptions] = useState([]);
+  const [posts, setPosts] = useState([]);
   const [select, setSelect] = useState("");
   const [counter, setCounter] = useState(1);
   const [correct, setCorrect] = useState(0);
   const [inCorrect, setInCorrect] = useState(0);
   const [percent, setPercent] = useState(0);
   const [show, setShow] = useState(false);
+
+
+ 
 
 
 
@@ -50,7 +52,9 @@ export default function Quiz() {
 
   const getIdPost = async (postId) => {
     const { data } = await axios.get(BASE_URL + postId);
-    posts.push(data);
+    data["title"] = question[wrongCounter-1]["prompt"];
+    data["slug"] = wrongCounter;
+    setPosts(posts.concat(data))
   };
 
   useEffect(() => {
@@ -79,7 +83,7 @@ export default function Quiz() {
   }
 
   const width = parseFloat(100 / percent);
-  let count = 1;
+
 
   const nextOption = () => {
     if (percent > counter) {
@@ -194,10 +198,13 @@ export default function Quiz() {
                 <h4 className="h6   font-weight-bold">
                   امتیاز شما {correct} از {question.length}
                 </h4>
-                <p className="text-center mb-0 font-weight-bold">
-                  برای پاسخ‌های اشتباه شما مقالاتی را پیشنهاد می کنیم که با
-                  مطالعه آن‌ها دانش کافی را بدست آورید.
-                </p>
+                {(question.length != correct)?(
+                    <p className="text-center mb-0 font-weight-bold">
+                    برای پاسخ‌های اشتباه شما مقالاتی را پیشنهاد می کنیم که با
+                    مطالعه آن‌ها دانش کافی را بدست آورید.
+                  </p>
+                ):null}
+                
               </div>
           </div>
           <SourcePost list={posts} />
