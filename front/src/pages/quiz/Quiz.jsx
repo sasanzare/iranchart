@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 import Loading from "../../components/loading/Loading";
 import Incorrect from "../../microComponents/incorrect/Incorrect";
@@ -29,12 +28,14 @@ export default function Quiz() {
   const [percent, setPercent] = useState(0);
   const [show, setShow] = useState(false);
 
-
- 
-
-
-
   const OPTIONS_URL = BASE_URL + "question-option/?question=" + counter;
+
+
+  window.addEventListener('popstate', (event) => {
+      window.location=document.referrer;
+      
+   });
+  
 
   const getQuiz = async () => {
     const { data } = await axios.get(QUIZ_URL);
@@ -77,14 +78,12 @@ export default function Quiz() {
       setCorrect(correct + 1);
     } else {
       setInCorrect(inCorrect + 1);
-      getIdPost(question[wrongCounter]["psot"]);
+      getIdPost(question[wrongCounter]["post"]);
     }
     wrongCounter++;
   }
 
   const width = parseFloat(100 / percent);
-
-
   const nextOption = () => {
     if (percent > counter) {
       count++;
@@ -95,7 +94,6 @@ export default function Quiz() {
       corrector();
       document.getElementById("context").remove();
       setShow(true);
-    
     }
   };
 

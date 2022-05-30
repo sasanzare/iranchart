@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.db.models import Q
+# from django.db.models import Q
 from . import models
 
 
@@ -33,9 +33,9 @@ class QuestionAdmin(admin.ModelAdmin):
 	fields = [
 		'prompt',
 		'quiz',
-		'psot'
+		'post'
 	]
-	list_display=['id', 'prompt', 'quiz','psot']
+	list_display=['id', 'prompt', 'quiz','post']
 	list_filter=[QuizQuestionFilter, ]
 	search_fields=['quiz', 'title']
 	inlines = [AnswerInline, ]

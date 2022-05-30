@@ -49,7 +49,7 @@ class Question(models.Model):
 		on_delete=models.DO_NOTHING,
         verbose_name='آزمون'
 	)
-	psot = models.ForeignKey(
+	post = models.ForeignKey(
 		Post, 
 		related_name='psot', 
 		on_delete=models.CASCADE,

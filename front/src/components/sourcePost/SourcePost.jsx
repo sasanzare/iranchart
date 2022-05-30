@@ -5,7 +5,7 @@ export default function SourcePost(props) {
   return (
     <div className="col-md-8 col-12 py-3 mx-auto">
     {props.list.map((post,index) => (
-        <div className="radius-10 shadow overflow-hidden mb-3 pb-3" key={post.id}>
+        <div className="radius-10 shadow overflow-hidden mb-3 pb-3" key={index}>
           <div className="bg-ashy px-3 pt-2">
             <h6 className="p-1 text-center small">سوال {post.slug}: {post.title}
             </h6>
