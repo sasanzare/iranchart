@@ -2,7 +2,12 @@ import { Link } from "react-router-dom";
 import NewsList from "../../blocks/newsList/NewsList";
 import LatestArticles from "../../components/latestArticles/LatestArticles";
 import Chart from './News.svg'
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 export default function News() {
+  UseDocumentTitle({
+    title: 'تحلیل روزانه',
+      metaDescription: 'ایران چارت | Iranchart.net'
+  })
   return (
     <div className="container py-5">
       <div className="row  mt-5">

@@ -1,9 +1,14 @@
 import QuizzesList from "../../blocks/quizzesList/QuizzesList";
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 import QuizCategory from "../../microComponents/quizCategory/QuizCategory";
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 import Quiz from './Quizzes.svg';
 
 function Quizzes() {
+  UseDocumentTitle({
+    title: 'کویز ها',
+      metaDescription: 'ایران چارت |  کویز‌ها'
+  })
   return (
     <div className="Quizzes container pt-5">
       <div className="row pt-5">

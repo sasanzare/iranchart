@@ -1,6 +1,11 @@
 import Faqlist from "../../components/faqlist/Faqlist";
 import { Link } from "react-router-dom";
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 function Faq() {
+  UseDocumentTitle({
+    title: 'سوالات متداول',
+      metaDescription: 'ایران چارت | سوالات متداول'
+  })
   return (
     <div className="Faq">
       <div className="container pt-5">

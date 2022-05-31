@@ -1,5 +1,10 @@
 import Articleslist from "../../blocks/articleslist/Articlesist";
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 function Articles() {
+  UseDocumentTitle({
+    title: 'مجله ها',
+      metaDescription: 'ایران چارت | مجله ها'
+  })
   return (
     <div className="Articles">
       <div className="container pt-5">

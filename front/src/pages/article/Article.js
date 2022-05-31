@@ -2,8 +2,13 @@ import Articleslist from "../../blocks/articleslist/Articlesist";
 import Articlecontent from "../../components/articlecontent/Articlecontent";
 import Comment from "../../blocks/Comment/Comment";
 import {Link,useParams } from "react-router-dom";
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 function Article() {
   const { id } = useParams();
+  UseDocumentTitle({
+    title: 'مجله',
+      metaDescription: 'ایران چارت | مجله'
+  })
   return (
     <div className="Article">
       <div className="container pt-5">

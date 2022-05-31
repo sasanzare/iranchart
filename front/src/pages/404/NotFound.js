@@ -1,6 +1,12 @@
 import { Link } from "react-router-dom";
 import styles from "./NotFound.css";
-const NotFound = () => (
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
+export default function NotFound(){
+  UseDocumentTitle({
+    title: 'صفحه ۴۰۴',
+      metaDescription: 'ایران چارت |  صفحه ۴۰۴'
+  })
+  return(
   <div className="NotFound">
    <div className="container  vh-100 d-flex align-items-center justify-content-center">
         <div className="row ">
@@ -448,6 +454,7 @@ const NotFound = () => (
         </div>
    </div>
   </div>
-);
+  );
+};
 
-export default NotFound;
+

@@ -1,4 +1,9 @@
-function About() {
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
+export default function About() {
+  UseDocumentTitle({
+    title: 'درباره ما',
+      metaDescription: ' درباره ما| ایران چارت'
+  })
   return (
     <div className="About">
       <div className="container pt-5">
@@ -84,4 +89,4 @@ function About() {
   );
 }
 
-export default About;
+

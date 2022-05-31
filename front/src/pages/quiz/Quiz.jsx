@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import React, { useState, useEffect } from "react";
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 import axios from "axios";
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 import Loading from "../../components/loading/Loading";
@@ -8,6 +9,9 @@ import Correct from "../../microComponents/correct/Correct";
 import SourcePost from "../../components/sourcePost/SourcePost";
 // import Option from "../../microComponents/option/Option"
 import { Styles } from "./Quiz.css";
+
+
+
 
 let right = 0;
 let wrongCounter = 0;
@@ -33,13 +37,16 @@ export default function Quiz() {
 
   window.addEventListener('popstate', (event) => {
       window.location=document.referrer;
-      
    });
   
 
   const getQuiz = async () => {
     const { data } = await axios.get(QUIZ_URL);
     setQuiz(data);
+    UseDocumentTitle({
+      title: data.title,
+      metaDescription: 'کویز |'+ data.title
+    })
   };
   const getQuestion = async () => {
     const { data } = await axios.get(QUESTIONS_URL);
@@ -96,6 +103,8 @@ export default function Quiz() {
       setShow(true);
     }
   };
+
+
 
   return (
     <div className="Quiz container pt-5">

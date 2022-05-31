@@ -1,6 +1,11 @@
 import Map from "../../components/map/Map";
 import Contactform from "../../components/contactform/Contactform";
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 function Contact() {
+  UseDocumentTitle({
+    title: 'ارتباط‌باما',
+      metaDescription: 'ایران چارت | ارتباط‌باما'
+  })
   return (
     <div className="Contact mt-5 pt-4">
       <div className="container pt-5">

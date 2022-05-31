@@ -1,6 +1,11 @@
 import Articleslist from "../../blocks/articleslist/Articlesist";
 import CourseList from "../../blocks/courseList/CourseList";
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 function Home() {
+  UseDocumentTitle({
+    title: 'ایران چارت',
+      metaDescription: 'ایران چارت | Iranchart.net'
+  })
   return (
     <div className="Home">
       <div className="container pt-5">
