@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/scrollToTop/ScrollToTop";
 import Backtotop from "./components/backtotop/Backtotop";
 import Header from './blocks/header/Header';
 import Footer from './blocks/footer/Footer';
@@ -17,12 +18,14 @@ import Quizzes from "./pages/quizzes/Quizzes";
 import Quiz from "./pages/quiz/Quiz";
 import News from "./pages/news/News";
 
-function App() {
+
+export default function App() {
   return (
     <div className="App">
       <Header/>
       <Backtotop/>
       <Routes>
+        {ScrollToTop()}
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact-us" element={<Contact />} />
@@ -43,4 +46,4 @@ function App() {
   );
 }
 
-export default App;
+

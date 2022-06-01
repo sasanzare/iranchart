@@ -10,9 +10,6 @@ import SourcePost from "../../components/sourcePost/SourcePost";
 // import Option from "../../microComponents/option/Option"
 import { Styles } from "./Quiz.css";
 
-
-
-
 let right = 0;
 let wrongCounter = 0;
 let count = 1;

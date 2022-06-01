@@ -25,7 +25,6 @@ export default function Course() {
   const getCourse = async () => {
     const { data } = await axios.get(BASE_URL + "product/" + id);
     setCourse(data);
-    console.log(data)
     UseDocumentTitle({
       title: data.name,
       metaDescription: data.descriptionTag

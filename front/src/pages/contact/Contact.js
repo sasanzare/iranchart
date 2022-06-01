@@ -58,12 +58,12 @@ function Contact() {
             </div>
           </div>
         </div>
-        <div className="row pt-5">
+        {/* <div className="row pt-5">
           <h4 className="text-center col-12 py-3">ما را بر روی نقشه ببینید.</h4>
           <div className="col-12 p-0 pb-4">
             <Map />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
