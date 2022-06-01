@@ -6,7 +6,7 @@ import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle
 export default function News() {
   UseDocumentTitle({
     title: 'تحلیل روزانه',
-      metaDescription: 'ایران چارت | Iranchart.net'
+      metaDescription: ' ایران چارت | ایرانچارت به صورت رایگان تحلیل فارکس (تکنیکال و فاندامنتال)را روزانه در تمامی جفت ارزها به صورت سیگنال های معاملاتی به شما هدیه می دهد.'
   })
   return (
     <div className="container py-5">
@@ -44,12 +44,12 @@ export default function News() {
             >
               دوره های آموزشی
             </Link>
-            <Link
+            {/* <Link
               className=" btn btn-block radius-10 cs-color cs-br-color "
               to="/#coins"
             >
               تقویم اقتصادی
-            </Link>
+            </Link> */}
           </div>
           <LatestArticles />
         </div>

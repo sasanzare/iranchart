@@ -22,6 +22,7 @@ class Product(models.Model):
     category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE,verbose_name='دسته بندی')
     name = models.CharField(max_length=100, db_index=True,verbose_name='نام دوره')
     slug = models.SlugField(max_length=100, db_index=True,verbose_name='آدرس دوره')
+    descriptionTag = models.TextField(verbose_name="توضیحات سربرگ")
     level = models.CharField(max_length=100, db_index=True,verbose_name='سطح دوره')
     location = models.CharField(max_length=100, db_index=True,verbose_name='محل برگزاری')
     about = models.TextField(blank=True,verbose_name='درباره مدرس دوره')

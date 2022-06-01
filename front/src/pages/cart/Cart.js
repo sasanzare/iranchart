@@ -1,4 +1,4 @@
-function Cart() {
+export default function Cart() {
   return (
     <div className="Cart container pt-5">
       <div className="row pt-5 pb-4 my-5">
@@ -62,4 +62,4 @@ function Cart() {
   );
 }
 
-export default Cart;
+

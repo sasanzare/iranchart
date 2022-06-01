@@ -110,12 +110,12 @@ function Home() {
         </div>
         <CourseList />
         <div id="coins" className="row pt-5">
-          <div className="col-12 pt-5">
+          {/* <div className="col-12 pt-5">
             <img className="w-100" src="./image/nemoodar.jpg" alt="iranchart" />
           </div>
           <div className="col-12 pt-4">
             <img src="./image/api.jpg" alt="iranchart" className="pt-5 w-100" />
-          </div>
+          </div> */}
 
           <h5 className="col-12 text-center pb-4  pt-5">
             با مطالعه مجله ایران چارت همیشه بروز باشید

@@ -14,7 +14,8 @@ import {
   
 } from "@fortawesome/free-solid-svg-icons";
 import Loading from "../../components/loading/Loading";
-function Course() {
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
+export default function Course() {
   const { id } = useParams();
   const [course, setCourse] = useState([]);
 
@@ -24,6 +25,11 @@ function Course() {
   const getCourse = async () => {
     const { data } = await axios.get(BASE_URL + "product/" + id);
     setCourse(data);
+    console.log(data)
+    UseDocumentTitle({
+      title: data.name,
+      metaDescription: data.descriptionTag
+    })
   };
 
   useEffect(() => {
@@ -32,7 +38,7 @@ function Course() {
 
   return (
     <div className="Course">
-      <div className="container pt-5">
+      <div className="container py-5">
         <div className="row  mt-5">
           <div className="col-lg-9 col-12 pl-lg-5 pr-lg-1">
             <div className="text-right p-3 shadow-sm radius-10">
@@ -161,4 +167,4 @@ function Course() {
   );
 }
 
-export default Course;
+

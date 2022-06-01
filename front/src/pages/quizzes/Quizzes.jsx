@@ -6,11 +6,11 @@ import Quiz from './Quizzes.svg';
 
 function Quizzes() {
   UseDocumentTitle({
-    title: 'کویز ها',
-      metaDescription: 'ایران چارت |  کویز‌ها'
+    title: 'کویزها',
+      metaDescription: 'ایران چارت | کوییز های ایرانچارت یک تجربه ی تمام عیار است؛کوییز هارا امتحان کنید تا با ارتقای سطح دانش خود و بروزرسانی سطح اطلاعات فارکسی خود با سبکی جدید از آموزش روبرو شوید.'
   })
   return (
-    <div className="Quizzes container pt-5">
+    <div className="Quizzes container py-5">
       <div className="row pt-5">
         <div className="col-12 text-center">
           <img src={Quiz} width={100} alt="Quiz" />

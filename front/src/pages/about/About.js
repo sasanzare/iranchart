@@ -1,8 +1,8 @@
 import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
 export default function About() {
   UseDocumentTitle({
-    title: 'درباره ما',
-      metaDescription: ' درباره ما| ایران چارت'
+    title: 'درباره‌ما',
+      metaDescription: ' ایران چارت |با ما در ورود به بازار فارکس مطمعن  پیش روید،مجموعه ی ایران چارت تمام تلاش خود را میکند تا از مخاطبین خود حمایت کرده و تریدر های مجرب در این زمینه را پرورش دهد.'
   })
   return (
     <div className="About">
@@ -37,7 +37,7 @@ export default function About() {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container pt-5">
         <p className="h4 text-green">ایران چارت را بهتر بشناسید ! </p>
         <video className="rounded-lg" width="100%" height="auto" controls poster="image/need.png">
           <source src="./video/myVideo.mp4" type="video/mp4" />
@@ -45,7 +45,7 @@ export default function About() {
         </video>
       </div>
 
-      <div className="container mt-4 ">
+      <div className="container mt-4 pb-5">
         <div className="row ">
           <div className=" col-md-4 col-12 pb-4  d-flex justify-content-md-start justify-content-center  ">
             <div className="col-12 pr-0 pl-0 bg-white text-center trborder pb-3">

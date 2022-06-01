@@ -4,7 +4,7 @@ import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle
 function Faq() {
   UseDocumentTitle({
     title: 'سوالات متداول',
-      metaDescription: 'ایران چارت | سوالات متداول'
+      metaDescription: 'ایران چارت | با تنوع پرسش و پاسخ هایی که در ایرانچارت با آن مواجه میشوید به تمامی سوالات خود در زمینه ی فارکس اعم از ثبت نام،نحوه ی ورود به بازار،اسپرد،سویاپ و... پاسخ خواهید گرفت.'
   })
   return (
     <div className="Faq">
@@ -53,12 +53,12 @@ function Faq() {
               >
                 تحلیل روزانه
               </Link>
-              <a
+              {/* <a
                 className=" btn btn-block radius-10 cs-color cs-br-color "
                 href="/#coins"
               >
                 تقویم اقتصادی
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

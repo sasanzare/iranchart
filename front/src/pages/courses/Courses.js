@@ -1,5 +1,10 @@
 import CourseList from "../../blocks/courseList/CourseList";
-function Courses() {
+import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
+export default function Courses() {
+  UseDocumentTitle({
+    title: 'دوره‌های آموزشی',
+    metaDescription: 'دوره‌های آموزشی ایران چارت'
+  })
   return (
     <div className="Course">
       <div className="container pt-5">
@@ -15,4 +20,4 @@ function Courses() {
   );
 }
 
-export default Courses;
+ 

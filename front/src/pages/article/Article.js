@@ -2,13 +2,9 @@ import Articleslist from "../../blocks/articleslist/Articlesist";
 import Articlecontent from "../../components/articlecontent/Articlecontent";
 import Comment from "../../blocks/Comment/Comment";
 import {Link,useParams } from "react-router-dom";
-import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle";
+
 function Article() {
   const { id } = useParams();
-  UseDocumentTitle({
-    title: 'مجله',
-      metaDescription: 'ایران چارت | مجله'
-  })
   return (
     <div className="Article">
       <div className="container pt-5">
@@ -38,12 +34,12 @@ function Article() {
               >
                 تحلیل روزانه
               </Link>
-              <a
+              {/* <a
                 className=" btn btn-block radius-10 cs-color cs-br-color "
                 href="/#coins"
               >
                 تقویم اقتصادی
-              </a>
+              </a> */}
               <a
                 className=" btn btn-block radius-10 cs-color cs-br-color "
                 href="=#"

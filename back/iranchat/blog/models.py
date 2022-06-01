@@ -33,6 +33,7 @@ class Post(models.Model):
     )
     title = models.CharField(max_length=250,verbose_name="عنوان")
     slug = models.SlugField(max_length=250,unique_for_date='publish',verbose_name='آدرس نوشته')
+    description = models.TextField(verbose_name="توضیحات")
     author = models.ForeignKey(User,on_delete=models.CASCADE,related_name='blog_posts',verbose_name='نویسنده')
     category = models.ForeignKey(Category,on_delete=models.DO_NOTHING,related_name='blog_category',verbose_name='دسته بندی')
     body = RichTextUploadingField(verbose_name="محتوا")

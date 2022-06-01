@@ -61,11 +61,11 @@ function Header() {
                   تحلیل روزانه
                 </Link>
               </li>
-              <li className=" dropdown ">
+              {/* <li className=" dropdown ">
                 <a className="dropbtn bg-white border-0 d-block" href="/#coins">
                   تقویم اقتصادی
                 </a>
-              </li>
+              </li> */}
               <li className=" dropdown ">
                 <Link
                   className="dropbtn bg-white border-0 d-block"

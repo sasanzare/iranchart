@@ -4,10 +4,10 @@ import UseDocumentTitle from "../../components/useDocumentTitle/UseDocumentTitle
 function Contact() {
   UseDocumentTitle({
     title: 'ارتباط‌باما',
-      metaDescription: 'ایران چارت | ارتباط‌باما'
+      metaDescription: 'ایران چارت | با هرگونه سوال یا ابهامی در زمینه ثبت نام بروکر،دوره های آموزشی،نحوه ی افتتاح حساب در بروکر و یا واریز و برداشت مواجه شدید،با پشتیبانی ما در ارتباط باشید.'
   })
   return (
-    <div className="Contact mt-5 pt-4">
+    <div className="Contact mt-5 pt-4 pb-5">
       <div className="container pt-5">
         <div className="row">
           <div className="col-12 contactform px-4 py-4 ">

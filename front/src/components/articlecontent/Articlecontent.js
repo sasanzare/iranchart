@@ -4,7 +4,7 @@ import axios from "axios";
 import Newsletter from "../newsletter/Newsletter";
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 import Loading from "../loading/Loading";
-
+import UseDocumentTitle from "../useDocumentTitle/UseDocumentTitle"
 export default function Articlecontent(props) {
   const [article, setarticle] = useState([]);
   //     content = article.body.replace('src=\"/', 'src="' + BaseURLBack);
@@ -12,6 +12,10 @@ export default function Articlecontent(props) {
   const getArticle = async () => {
     const { data } = await axios.get(BASE_URL + props.id);
     setarticle(data);
+    UseDocumentTitle({
+      title: data.title,
+        metaDescription: data.description
+    })
   };
 
   useEffect(() => {
