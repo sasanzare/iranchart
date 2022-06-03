@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Loading from "../../components/loading/Loading";
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 
-function CourseList() {
+function CourseList(props) {
   const courses_URL = BASE_URL + "products?ordering=-created";
   const [courses, setCourses] = useState([]);
 
@@ -20,7 +20,7 @@ function CourseList() {
   return (
     <div className="CourseList row pb-5">
       {courses.length > 0 ? (
-        courses.map((course) => (
+        courses.slice(0,props.number).map((course) => (
           <CourseCard
             url={course.id}
             key={course.id}

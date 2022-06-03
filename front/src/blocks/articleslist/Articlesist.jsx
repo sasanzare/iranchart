@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 import Loading from "../../components/loading/Loading";
 
-function Articleslist() {
+function Articleslist(props) {
   const [articles, setArticles] = useState([]);
   const articles_URL = BASE_URL + "?ordering=-created";
 
@@ -20,7 +20,7 @@ function Articleslist() {
   return (
     <div className="Articleslist row pb-5">
       {articles.length > 0 ? (
-        articles.map((article) => (
+        articles.slice(0,props.number).map((article) => (
           <Articlecard
             url={article.id}
             key={article.id}
@@ -28,6 +28,7 @@ function Articleslist() {
             title={article.title}
             content={article.body}
           />
+          
         ))
       ) : (
         <Loading />

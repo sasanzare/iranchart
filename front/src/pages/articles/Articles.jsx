@@ -11,7 +11,7 @@ function Articles() {
         <div className="row pt-5">
           <h1 className="col-12 text-center h2 pb-3"> مقالات</h1>
         </div>
-        <Articleslist/>
+        <Articleslist />
       </div>
     </div>
   );

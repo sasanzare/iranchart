@@ -56,7 +56,7 @@ function Article() {
           </div>
           <h5 className="text-center pb-3 pt-5 mt-3  col-12">مقالات مشابه</h5>
         </div>
-        <Articleslist />
+        <Articleslist number={3}/>
       </div>
     </div>
   );

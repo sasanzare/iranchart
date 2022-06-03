@@ -108,7 +108,7 @@ function Home() {
             رشد شما با یادگیری آغاز میشود
           </h5>
         </div>
-        <CourseList />
+        <CourseList number={3} />
         <div id="coins" className="row pt-5">
           {/* <div className="col-12 pt-5">
             <img className="w-100" src="./image/nemoodar.jpg" alt="iranchart" />
@@ -121,7 +121,7 @@ function Home() {
             با مطالعه مجله ایران چارت همیشه بروز باشید
           </h5>
         </div>
-        <Articleslist />
+        <Articleslist number={3} />
       </div>
     </div>
   );
