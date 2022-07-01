@@ -20,7 +20,7 @@ class Category(models.Model):
 
 class Quiz(models.Model):
 	title = models.CharField(max_length=255, default='',verbose_name='عنوان')
-	author = models.ForeignKey(User, on_delete=models.DO_NOTHING, default=None,verbose_name='نویسنده')
+	author = models.ForeignKey(User, on_delete=models.CASCADE, default=None,verbose_name='نویسنده')
 	category = models.ForeignKey(Category, related_name='quiz', on_delete=models.CASCADE,verbose_name='دسته بندی')
 	thumbnail = models.ImageField(upload_to='images',verbose_name='تصویر آزمون')
 	created = models.DateTimeField(auto_now_add=True,verbose_name='زمان ایجاد')
@@ -46,7 +46,7 @@ class Question(models.Model):
 	quiz = models.ForeignKey(
 		Quiz, 
 		related_name='questions', 
-		on_delete=models.DO_NOTHING,
+		on_delete=models.CASCADE,
         verbose_name='آزمون'
 	)
 	post = models.ForeignKey(
@@ -68,7 +68,7 @@ class Answer(models.Model):
 	question = models.ForeignKey(
 		Question, 
 		related_name='answers', 
-		on_delete=models.DO_NOTHING,
+		on_delete=models.CASCADE,
         verbose_name='سوال'
 	)
 	text = models.CharField(max_length=255,verbose_name='متن')

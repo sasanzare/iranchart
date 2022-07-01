@@ -50,7 +50,7 @@ export default function Articlecontent(props) {
            
             <div
               className="text-justify pb-3 pt-3"
-              dangerouslySetInnerHTML={{ __html: article.body.replace('src=\"/', 'src="http://localhost:8000/') }}
+              dangerouslySetInnerHTML={{ __html: article.body.replaceAll('src=\"/', 'src="http://localhost:8000/') }}
             ></div>
           </div>
         ) : (
