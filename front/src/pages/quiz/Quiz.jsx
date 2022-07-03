@@ -29,7 +29,7 @@ export default function Quiz() {
   const [percent, setPercent] = useState(0);
   const [show, setShow] = useState(false);
 
-  const OPTIONS_URL = BASE_URL + "question-option/?question=" + counter;
+  // const OPTIONS_URL = BASE_URL + "question-option/?question=" + counter;
 
 
   window.addEventListener('popstate', (event) => {
@@ -49,9 +49,10 @@ export default function Quiz() {
     const { data } = await axios.get(QUESTIONS_URL);
     setQuestion(data);
     setPercent(data.length);
+    getOptions(data[counter - 1]["id"]);
   };
-  const getOptions = async () => {
-    const { data } = await axios.get(OPTIONS_URL);
+  const getOptions = async (id) => {
+    const { data } = await axios.get(BASE_URL + "question-option/?question=" + id);
     setOptions(data);
   };
 
@@ -65,12 +66,11 @@ export default function Quiz() {
   useEffect(() => {
     getQuiz();
     getQuestion();
-    getOptions();
   }, []);
 
-  useEffect(() => {
-    getOptions();
-  }, [counter]);
+  // useEffect(() => {
+  //   // getOptions(question[counter - 1]["prompt"]);
+  // }, [question]);
 
   function corrector() {
     options.forEach((option) => {
@@ -90,18 +90,18 @@ export default function Quiz() {
   const width = parseFloat(100 / percent);
   const nextOption = () => {
     if (percent > counter) {
+      getOptions(question[counter]["id"]);
       count++;
       corrector();
-      setCounter(counter + 1);
+      setCounter(counter + 1); 
       document.querySelector(".progress-bar").style.width = width * count + "%";
     } else if (percent == counter) {
       corrector();
       document.getElementById("context").remove();
       setShow(true);
+      setCounter(1); 
     }
   };
-
-
 
   return (
     <div className="Quiz container pt-5">
