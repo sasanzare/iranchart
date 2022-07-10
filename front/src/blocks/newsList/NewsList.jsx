@@ -5,7 +5,8 @@ import BASE_URL from "../../microComponents/baseUrl/BaseUrl";
 import Loading from "../../components/loading/Loading";
 export default function NewsList() {
   const date = new Date();
-  const NEWS_URL = BASE_URL + "news/?date="+ date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1)+ "-" + date.getUTCDate() + '&ordering=-created';
+  // const NEWS_URL = BASE_URL + "news/?date="+ date.getUTCFullYear() + "-" + (date.getUTCMonth() + 1)+ "-" + date.getUTCDate() + '&ordering=-created';
+  const NEWS_URL = BASE_URL + "news/";
 
   const [news, setNews] = useState([]);
   const getNews = async () => {
