@@ -1,4 +1,4 @@
-Django Rest API Example: Iranchart
+Iranchart
 Abstract
 The Iranchart project serves as an illustrative example of building a RESTful API using Django and Django Rest Framework (DRF). By following this sample project, developers can gain insights into structuring APIs, handling serializers, and managing endpoints.
 ________________________________________
@@ -30,8 +30,4 @@ Technical Overview
 •	Start the development server:
 •	python manage.py runserver
 •	Access the API endpoints (e.g., /api/irancharts/ and /api/irancharts/<pk>/).
-________________________________________
-Conclusion
-The Iranchart project demonstrates the fundamental steps involved in creating a Django REST API. Developers can use this example as a starting point for building more complex APIs.
-GitHub Repository Link
 
