@@ -498,6 +498,3 @@ POST /api/v1/newsletter           Submit newsletter email
 
 Repository: <https://github.com/sasanzare/iranchart>
 
----
-
-This README was prepared as a portfolio-grade project document based on the public repository structure, React frontend code, Django backend apps, DRF API layer, models, routes, and configuration reviewed on May 31, 2026.
